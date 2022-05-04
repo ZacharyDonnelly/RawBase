@@ -3,12 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "dev": "yarn run webpack --env=development --hot",
+    "dev:debug": "yarn run debug --env=development",
     "lint-staged": "cat .lintstagedrc.json | npx lint-staged --config -",
     "lint:all": "npm-run-all --parallel lint:*",
     "lint:eslint": "eslint --fix --ignore-path .gitignore --ext .ts,.tsx",
     "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,ts,js,json,scss,tsx}\"",
     "lint:stylelint": "stylelint .stylelintrc.json --fix --ignore-path .gitignore",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prod": "yarn run webpack --env=production",
+    "prod:analyze": "yarn run prod --env.presets analyze",
+    "prod:compress": "yarn run prod --env=production compress",
+    "prod:debug": "yarn run debug --env=production",
+    "prod:ts": "yarn run prod --env.presets typescript",
+    "start": "webpack-dev-server --env development --hot --open",
+    "webpack": "webpack"
   },
   "browserslist": {
     "production": [

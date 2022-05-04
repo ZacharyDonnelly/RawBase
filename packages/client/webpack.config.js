@@ -1,19 +1,22 @@
 /* eslint-disable no-undef */
 const webpack = require('webpack')
-const webpackMerge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const presetConfig = require('./build/loadPresets')
+
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const modeConfig = (env) => require(`./build/webpack.${env}`)(env)
 
-module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
-  webpackMerge(
+const presetConfig = require('./build/loadPresets')
+// TODO Re-add mode change
+// const modeConfig = (env) => require('./build/webpack.development')(env)
+
+module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
+  merge(
     {
       entry: './src/index.tsx',
       devServer: {
         historyApiFallback: true,
-        port: 8081,
+        port: 3000
       },
       mode,
       module: {
@@ -27,56 +30,56 @@ module.exports = ({ mode, presets } = { mode: 'production', presets: [] }) =>
                   name: '[path][name].[ext]',
                   limit: 8192,
                   fallback: require.resolve('file-loader'),
-                  quality: 85,
-                },
-              },
-            ],
+                  quality: 85
+                }
+              }
+            ]
           },
           {
             test: /\.(woff|woff2)$/,
-            use: ['file-loader'],
+            use: ['file-loader']
           },
           {
             test: /\.tsx?$/,
             loader: 'awesome-typescript-loader',
-            exclude: /node_modules/,
+            exclude: /node_modules/
           },
           {
             test: /\.jsx?$/,
             exclude: /(node_modules|bower_components)/,
             loader: 'babel-loader',
-            query: {
-              presets: ['@babel/preset-react'],
-            },
-          },
-        ],
+            options: {
+              presets: ['@babel/preset-react']
+            }
+          }
+        ]
       },
       resolve: {
-        extensions: ['*', '.ts', '.tsx', '.js', '.json', '.jsx'],
+        extensions: ['*', '.ts', '.tsx', '.js', '.json', '.jsx']
       },
       output: {
         publicPath: '/',
         filename: '[name].hash.js',
-        chunkFilename: '[name].lazy-chunk.js',
+        chunkFilename: '[name].lazy-chunk.js'
       },
       optimization: {
         splitChunks: {
-          chunks: 'all',
-        },
+          chunks: 'all'
+        }
       },
       plugins: [
         new HtmlWebpackPlugin({
           inject: true,
           title: 'RawBase Loader',
-          template: './src/public/index.html',
-          filename: 'index.html',
+          template: './public/index.html',
+          filename: 'index.html'
         }),
         new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
-        new CheckerPlugin(),
-        new webpack.WatchIgnorePlugin([/css?\.d\.ts$/]),
-      ],
+        new CheckerPlugin()
+        // new webpack.WatchIgnorePlugin(/css?.d.ts$/),
+      ]
     },
-    modeConfig(mode),
+    // modeConfig(mode),
     presetConfig({ mode, presets })
   )

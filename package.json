@@ -4,15 +4,12 @@
   "private": true,
   "repository": "https://github.com/ZacharyDonnelly/RawBase.git",
   "author": "Zachary Donnelly",
-  "main": "./src/index.tsx",
+  "main": "index.tsx",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "webpack-dev": "webpack-dev-server --open --hot",
-    "webpack": "webpack",
-    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "dev": "yarn run webpack --env.mode=development --hot"
+    "dev": "cd packages/client && yarn start"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
