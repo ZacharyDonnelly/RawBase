@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const presetConfig = require('./build/loadPresets')
 // TODO Re-add mode change
-// const modeConfig = (env) => require('./build/webpack.development')(env)
+// const modeConfig = (env) => require(`./build/webpack.${env}`)(env)
 
 module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
   merge(
@@ -19,6 +19,7 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
         port: 3000
       },
       mode: 'development',
+      devtool: 'inline-source-map',
       module: {
         rules: [
           {
@@ -38,6 +39,10 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
           {
             test: /\.(woff|woff2)$/,
             use: ['file-loader']
+          },
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader?modules']
           },
           {
             test: /\.s[ac]ss$/i,
@@ -70,6 +75,7 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
       },
       output: {
         publicPath: '/',
+        clean: true,
         filename: '[name].hash.js',
         chunkFilename: '[name].lazy-chunk.js'
       },
@@ -87,8 +93,8 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
         }),
         new webpack.ProgressPlugin(),
         new CleanWebpackPlugin(),
-        new CheckerPlugin()
-        // new webpack.WatchIgnorePlugin(/css?.d.ts$/),
+        new CheckerPlugin(),
+        new webpack.WatchIgnorePlugin({ paths: [/css?.d.ts$/] })
       ]
     },
     // modeConfig(mode),
