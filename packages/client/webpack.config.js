@@ -18,11 +18,11 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
         historyApiFallback: true,
         port: 3000
       },
-      mode,
+      mode: 'development',
       module: {
         rules: [
           {
-            test: /\.(png|jpe?g|gif|ico)$/i,
+            test: /\.(png|jpe?g|gif|ico|svg)$/i,
             use: [
               {
                 loader: 'url-loader',
@@ -40,8 +40,19 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
             use: ['file-loader']
           },
           {
+            test: /\.s[ac]ss$/i,
+            use: [
+              // Creates `style` nodes from JS strings
+              'style-loader',
+              // Translates CSS into CommonJS
+              'css-loader',
+              // Compiles Sass to CSS
+              'sass-loader'
+            ]
+          },
+          {
             test: /\.tsx?$/,
-            loader: 'awesome-typescript-loader',
+            loader: 'ts-loader',
             exclude: /node_modules/
           },
           {

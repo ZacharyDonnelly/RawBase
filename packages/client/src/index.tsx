@@ -2,11 +2,12 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 
+import { BrowserRouter } from 'react-router-dom'
+
 import AppRouter from './routes'
 
-import './index.scss'
-import { BrowserRouter } from 'react-router-dom'
 import { store } from './store/store'
+import './index.scss'
 
 const container = document.getElementById('root')!
 const root = createRoot(container)
@@ -14,7 +15,7 @@ const root = createRoot(container)
 root.render(
   <BrowserRouter>
     <Provider store={store}>
-    <AppRouter />
+      <AppRouter />
     </Provider>
-    </BrowserRouter>>
+  </BrowserRouter>
 )
