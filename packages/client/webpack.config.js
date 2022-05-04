@@ -95,7 +95,10 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
         new CleanWebpackPlugin(),
         new CheckerPlugin(),
         new webpack.WatchIgnorePlugin({ paths: [/css?.d.ts$/] })
-      ]
+      ],
+      cacheDirectory: true,
+      cacheCompression: true,
+      compact: true
     },
     // modeConfig(mode),
     presetConfig({ mode, presets })
