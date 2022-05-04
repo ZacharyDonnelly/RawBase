@@ -95,10 +95,14 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
         new CleanWebpackPlugin(),
         new CheckerPlugin(),
         new webpack.WatchIgnorePlugin({ paths: [/css?.d.ts$/] })
-      ],
-      cacheDirectory: true,
-      cacheCompression: true,
-      compact: true
+      ]
+      //
+      // // This is a feature of `babel-loader` for webpack (not Babel itself).
+      // // It enables caching results in ./node_modules/.cache/babel-loader/
+      // // directory for faster rebuilds.
+      // cacheDirectory: true,
+      // cacheCompression: false,
+      // compact: false
     },
     // modeConfig(mode),
     presetConfig({ mode, presets })
