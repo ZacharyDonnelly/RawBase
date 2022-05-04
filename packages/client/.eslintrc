@@ -1,0 +1,74 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["jsx-a11y", "prettier", "import", "react", "react-hooks"],
+  "rules": {
+    "import/order": [
+      "error",
+      { "newlines-between": "always-and-inside-groups" }
+    ],
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-onchange": 0,
+    "react/require-default-props": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "comma-dangle": "off",
+    "prefer-const": "warn",
+    "semi": "off",
+    "no-console": "warn",
+    "no-unexpected-multiline": "warn",
+    "no-var": "error",
+    "no-duplicate-imports": "error",
+    "no-use-before-define": ["error", "nofunc"],
+    "no-useless-return": "error",
+    "no-else-return": [
+      "error",
+      {
+        "allowElseIf": false
+      }
+    ],
+    "prettier/prettier": "off",
+    "arrow-body-style": ["warn", "as-needed"],
+    "eqeqeq": ["warn", "smart"],
+    "padding-line-between-statements": [
+      "error",
+      // Require blank lines before all return statements
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      // Require blank lines before and after all following statements
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["for", "function", "if", "switch", "try"]
+      },
+      {
+        "blankLine": "always",
+        "prev": ["for", "function", "if", "switch", "try"],
+        "next": "*"
+      }
+    ]
+  },
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
+  }
+}

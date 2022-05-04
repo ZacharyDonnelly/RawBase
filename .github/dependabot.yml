@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: yarn
+    directory: '/packages/**'
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    versioning-strategy: increase
+    labels:
+      - 'pr: dependencies'

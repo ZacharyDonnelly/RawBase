@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "drewbourne.vscode-remark-lint",
+    "EditorConfig.editorconfig",
+    // SCSS intellisense
+    // https://github.com/mrmlnc/vscode-scss
+    "mrmlnc.vscode-scss",
+    // Format-on-save with Prettier
+    // https://github.com/prettier/prettier-vscode
+    "esbenp.prettier-vscode",
+    // Lint markdown in README files
+    // https://github.com/DavidAnson/vscode-markdownlint
+    "DavidAnson.vscode-markdownlint"
+  ]
+}

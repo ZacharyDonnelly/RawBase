@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  frontend:
+    image: client
+    restart: always
+    build:
+      context: ./packages/client
+      dockerfile: ./config/docker/Dockerfile.frontend
+    ports:
+      - '3000:80'
+    environment:
+      - NODE_ENV=development
+  backend:
+    image: api
+    restart: always
+    build:
+      context: ./packages/api
+      dockerfile: ./config/docker/Dockerfile.backend
+    ports:
+      - '3006:3006'

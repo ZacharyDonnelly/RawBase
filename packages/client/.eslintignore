@@ -1,0 +1,12 @@
+**/build/*
+**/dist/*
+**/node_modules/*
+node_modules
+nginx/*
+.gitignore
+*.eslintignore
+*.eslintcache
+.prettierignore
+vue.*
+*.scss
+scss

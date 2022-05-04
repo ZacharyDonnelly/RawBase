@@ -1,0 +1,89 @@
+{
+  // STYLELINT
+  // ----------------------------------------
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  // VETUR
+  // Disable rules if user has extension installed and enabled.
+  // ----------------------------------------
+  // Files
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/dist": true,
+    "**/coverage": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+
+  // Defaults override:
+  "vetur.validation.style": false,
+  "vetur.validation.script": true,
+  "vetur.validation.template": true,
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.grammar.customBlocks": {
+    "docs": "md",
+    "i18n": "json",
+    "router": "js"
+  },
+
+  // Disables default checks:
+  "less.validate": false,
+  // EDITOR
+  // ----------------------------------------
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  // HTML
+  // ----------------------------------------
+  "html.format.enable": false,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html"
+  },
+  // FILES
+  // ----------------------------------------
+  "files.associations": {
+    "*.config.js": "javascript",
+    "*.vue": "vue"
+  },
+  // ESLINT
+  // ----------------------------------------
+  // Linting:,
+  "eslint.validate": [
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptreact", "autoFix": true },
+    { "language": "javascript", "autoFix": true }
+  ],
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "extensions": [".html", ".js", ".ts"]
+  },
+  "json.format.enable": true,
+  "javascript.validate.enable": true,
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

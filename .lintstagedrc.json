@@ -1,0 +1,6 @@
+{
+  "./src/**/*.tsx": ["yarn lint:eslint", "yarn lint:prettier"],
+  "./src/**/*.module.scss": ["yarn lint:prettier"],
+  "./src/**/*.scss": ["yarn lint:prettier", "yarn lint:stylelint"],
+  "./src/**/*.ts": ["yarn lint:eslint", "yarn lint:prettier"]
+}

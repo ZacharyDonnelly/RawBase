@@ -1,0 +1,9 @@
+# .gitignore syntax (uses node-ignore behind the scenes)
+node_modules
+.eslintrc.*
+.prettierrc.*
+.remarkrc.*
+.postcss.*
+*.js
+.stylintrc.*
+.stylelintrc.js
