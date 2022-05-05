@@ -3,9 +3,10 @@ import { Provider } from 'react-redux'
 
 import { BrowserRouter } from 'react-router-dom'
 
+import { store } from '../store'
+
 import AppRouter from './routes'
 
-import { store } from './store/store'
 import './index.scss'
 
 const container = document.getElementById('root')!
