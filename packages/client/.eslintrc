@@ -38,7 +38,7 @@
         "allowElseIf": false
       }
     ],
-    "prettier/prettier": "off",
+    "prettier/prettier": "warn",
     "arrow-body-style": ["warn", "as-needed"],
     "eqeqeq": ["warn", "smart"],
     "padding-line-between-statements": [
