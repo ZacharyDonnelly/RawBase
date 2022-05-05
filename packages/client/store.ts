@@ -1,5 +1,9 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
+import { createBrowserHistory, History } from 'history'
+
+export const history: History = createBrowserHistory()
+
 export const store = configureStore({
   reducer: {}
 })
