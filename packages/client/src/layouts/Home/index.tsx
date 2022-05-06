@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 
-import { HomepageCanvas } from '../../components/design/Canvas'
-
 import BottomImage from './HomeBottomImage'
 
 import styles from './styles.module.scss'
+
+import { HomepageCanvas } from '@/components/design/Canvas'
 
 const Home: FC = () => (
   <div className={styles.container}>

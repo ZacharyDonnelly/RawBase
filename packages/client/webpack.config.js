@@ -1,8 +1,10 @@
 /* eslint-disable no-undef */
+const path = require('path')
+
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
@@ -71,7 +73,14 @@ module.exports = ({ mode, presets } = { mode: 'development', presets: [] }) =>
         ]
       },
       resolve: {
-        extensions: ['*', '.ts', '.tsx', '.js', '.json', '.jsx']
+        plugins: [new TsconfigPathsPlugin()],
+        extensions: ['*', '.ts', '.tsx', '.js', '.json', '.jsx'],
+        alias: {
+          '@': path.resolve(__dirname, 'src'),
+          '@assets': path.resolve(__dirname, 'src/assets'),
+          '@components': path.resolve(__dirname, 'src/components')
+          // ...etc
+        }
       },
       output: {
         publicPath: '/',
