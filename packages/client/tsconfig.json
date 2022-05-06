@@ -20,8 +20,8 @@
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["*"],
-      "assets": ["assets/*"],
-      "components": ["components/*"]
+      "@assets": ["assets/*"],
+      "@components": ["components/*"]
     }
   }
 }
