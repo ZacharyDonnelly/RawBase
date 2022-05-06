@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "dev": "yarn run webpack --env=development --hot",
-    "dev:debug": "yarn run debug --env=development",
+    "dev": "yarn run webpack --open --hot",
+    "dev:debug": "yarn run debug",
     "lint-staged": "cat .lintstagedrc.json | npx lint-staged --config -",
     "lint:all": "npm-run-all --parallel lint:*",
     "lint:eslint": "eslint --fix --ignore-path .gitignore --ext .ts,.tsx",
