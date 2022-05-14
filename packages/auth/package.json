@@ -1,6 +1,6 @@
 {
-  "name": "rawbase_api",
-  "version": "1.0.0",
+  "name": "rawbase_auth_server",
+  "version": "1.0.1",
   "private": true,
   "description": "API client for RawBase",
   "license": "none",

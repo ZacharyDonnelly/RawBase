@@ -10,7 +10,11 @@
   ],
   "scripts": {
     "api": "cd packages/api && yarn dev",
-    "client": "cd packages/client && yarn start"
+    "client": "cd packages/client && yarn start",
+    "lint:eslint:client": "cd packages/client && yarn lint:eslint",
+    "lint:eslint:auth": "cd packages/auth && yarn lint:eslint",
+    "lint:prettier:client": "cd packages/client && yarn lint:prettier",
+    "lint:prettier:auth": "cd packages/auth && yarn lint:prettier"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",

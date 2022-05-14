@@ -25,7 +25,6 @@ const configureApp = () => {
   app.use(cookieParser(process.env.COOKIE_SECRET))
   app.use(morgan('dev'))
   app.use(urlencoded({ extended: true }))
-  app.use(express.static('public'))
 }
 
 const startServer = async () => {

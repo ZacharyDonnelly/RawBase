@@ -1,6 +1,23 @@
 {
-  "./src/**/*.tsx": ["yarn lint:eslint", "yarn lint:prettier"],
-  "./src/**/*.module.scss": ["yarn lint:prettier"],
-  "./src/**/*.scss": ["yarn lint:prettier", "yarn lint:stylelint"],
-  "./src/**/*.ts": ["yarn lint:eslint", "yarn lint:prettier"]
+  "./packages/client/src/**/*.tsx": [
+    "yarn lint:eslint:client",
+    "yarn lint:prettier:client"
+  ],
+  "./packages/auth/src/**/*.tsx": [
+    "yarn lint:eslint:auth",
+    "yarn lint:prettier:auth"
+  ],
+  "./packages/client/src/**/*.module.scss": ["yarn lint:prettier:client"],
+  "./packages/client/src/**/*.scss": [
+    "yarn lint:prettier:client",
+    "yarn lint:stylelint:client"
+  ],
+  "./packages/client/src/**/*.ts": [
+    "yarn lint:eslint:client",
+    "yarn lint:prettier:client"
+  ],
+  "./packages/auth/src/**/*.ts": [
+    "yarn lint:eslint:auth",
+    "yarn lint:prettier:auth"
+  ]
 }

@@ -8,11 +8,11 @@ import PubSub from 'apollo-server'
  *
  * @param {*} args
  */
-let getQuery = function (args: { query: any }) {
+const getQuery = function (args: { query: any }) {
   return args.query ? args.query : {}
 }
 
-let getInput = function (args: { input: any }) {
+const getInput = function (args: { input: any }) {
   return args.input ? args.input : {}
 }
 
