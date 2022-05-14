@@ -4,14 +4,15 @@
   "private": true,
   "description": "API client for RawBase",
   "license": "none",
-  "type": "module",
   "main": "server.ts",
   "scripts": {
-    "debug": "nodemon -e js,graphql -x node --inspect -r dotenv/config src/index.js",
+    "debug": "nodemon -e ts,js,graphql -x node --inspect -r dotenv/config src/index.js",
     "nodemon": "nodemon",
-    "start": "nodemon -e js,graphql -x node -r dotenv/config server.ts"
+    "start": "nodemon -e ts,js,graphql -x node ts-node server.ts",
+    "dev": "nodemon ts-node server.ts"
   },
   "dependencies": {
+    "@graphql-tools/schema": "^8.3.11",
     "apollo-server": "^3.7.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",

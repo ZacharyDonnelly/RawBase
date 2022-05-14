@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2019",
+    "lib": ["es6"],
+    "target": "es6",
     "module": "CommonJS",
     "declaration": true,
-    "rootDir": "src",
-    "outDir": "build",
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "sourceMap": true,
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": false,

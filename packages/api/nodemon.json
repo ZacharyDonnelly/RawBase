@@ -8,10 +8,10 @@
   },
 
   "runOnChangeOnly": false,
-  "watch": ["src/**/*.js", "src/**/*.ts", "src/**/*.graphql", "src/**/*.gql"],
+  "watch": ["src/**/*.js", "src/**/*.ts", "src/**/*.graphql", "src/**/*.gql", "*.ts"],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": ".ts,.js, .gql, .graphql",
-  "exec": "ts-node ./src/index.ts babel --extensions '.ts'"
+  "ext": ".ts, .js, .gql, .graphql",
+  "exec": "ts-node ./server.ts babel --extensions '.ts'"
 }
