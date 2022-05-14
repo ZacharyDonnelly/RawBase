@@ -9,7 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "cd packages/client && yarn start"
+    "api": "cd packages/api && yarn dev",
+    "client": "cd packages/client && yarn start"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
