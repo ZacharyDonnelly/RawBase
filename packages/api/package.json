@@ -1,0 +1,31 @@
+{
+  "name": "rawbase_api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API client for RawBase",
+  "license": "none",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "debug": "nodemon -e js,graphql -x node --inspect -r dotenv/config src/index.js",
+    "nodemon": "nodemon",
+    "start": "nodemon -e js,graphql -x node -r dotenv/config server.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.7.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.5.0",
+    "graphql-import": "^1.0.2",
+    "graphql-yoga": "^2.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "graphql-tools": "^8.2.9",
+    "nodemon": "^2.0.16"
+  }
+}
