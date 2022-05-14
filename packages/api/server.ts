@@ -29,7 +29,7 @@ const configureApp = () => {
 
 const startServer = async () => {
   await server.start()
-  server.applyMiddleware({ app })
+  server.applyMiddleware({ app, path: '/graphql' })
 }
 
 configureApp()

@@ -1,21 +1,9 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "declaration": true,
     "outDir": "dist",
-    "experimentalDecorators": true,
-    "sourceMap": true,
-    "strict": true,
-    "resolveJsonModule": true,
-    "isolatedModules": false,
-    "noEmit": false,
-    "allowJs": true,
-    "removeComments": false,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "module": "CommonJS",
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["src"]
 }
