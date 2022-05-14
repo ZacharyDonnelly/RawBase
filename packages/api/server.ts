@@ -1,9 +1,11 @@
 import express, { urlencoded } from 'express'
 import { ApolloServer } from 'apollo-server-express'
-import { schema } from './src/graphql'
+
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
+
+import { schema } from './src/graphql'
 
 const db = {}
 
@@ -13,7 +15,7 @@ const server = new ApolloServer({
   schema,
   introspection: true,
   csrfPrevention: true,
-  context: { db },
+  context: { db }
 })
 
 const configureApp = () => {

@@ -9,7 +9,7 @@
     "lint-staged": "cat .lintstagedrc.json | npx lint-staged --config -",
     "lint:all": "npm-run-all --parallel lint:*",
     "lint:eslint": "eslint --fix --ignore-path .gitignore --ext .ts,.tsx",
-    "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,ts,js,json,scss,tsx}\"",
+    "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,ts,json,scss,tsx}\"",
     "lint:stylelint": "stylelint .stylelintrc.json --fix --ignore-path .gitignore",
     "prepare": "husky install",
     "prod": "yarn run webpack --env=production",
@@ -82,16 +82,7 @@
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "classnames": "^2.3.1",
-    "eslint": "^8.14.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-config-react-app": "^7.0.1",
-    "eslint-plugin": "^1.0.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.5.0",
     "postcss-html": "^1.4.1",
-    "prettier": "^2.6.2",
     "sass": "^1.51.0",
     "stylelint": "^14.8.1",
     "stylelint-a11y": "^1.2.3",
@@ -100,7 +91,6 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-no-unsupported-browser-features": "^5.0.3",
     "stylelint-scss": "^4.2.0",
-    "tsconfig-paths-webpack-plugin": "^3.5.2",
-    "typescript": "^4.6.4"
+    "tsconfig-paths-webpack-plugin": "^3.5.2"
   }
 }
