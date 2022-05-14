@@ -19,5 +19,6 @@
   "./packages/auth/src/**/*.ts": [
     "yarn lint:eslint:auth",
     "yarn lint:prettier:auth"
-  ]
+  ],
+  "./packages/auth/*.ts": ["yarn lint:eslint:auth", "yarn lint:prettier:auth"]
 }

@@ -1,23 +1,7 @@
 type User {
-    id: ID
-    serial: String
-    firstName: String
-    lastName: String
-    org: Org
-    roles: [Role]
-}
-input UserInput {
-    id: ID
-    serial: String
-    firstName: String
-    lastName: String
-    org: OrgRecordInput
-}
-input UserRecordInput {
-    id: ID
-    serial: String
-}
-type UserOutput {
-    count: Int
-    data: [User]
+  id: ID
+  firstName: String
+  lastName: String
+  email: String
+  password_hash: String
 }

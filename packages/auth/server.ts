@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import express, { urlencoded } from 'express'
 
 import { ApolloServer } from 'apollo-server-express'
