@@ -1,2 +1,4 @@
 *.db
 *.sql
+__pycache__
+*.pyc
