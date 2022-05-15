@@ -7,6 +7,8 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
 
+import dotenv from 'dotenv'
+
 import { createApolloServer } from './src/graphql'
 
 const app = express()
@@ -21,15 +23,16 @@ const configureApp = () => {
 }
 
 async function main() {
+  dotenv.config()
   configureApp()
   await createApolloServer(httpServer, app)
 
   await new Promise<void>((resolve) =>
-    app.listen({ port: 3006 }, () => {
+    app.listen({ port: process.env.PORT }, () => {
       console.log(
         [
-          'GraphQL server ready at \thttp://localhost:3006/graphql\n',
-          `API ready on \thttp://localhost:3006${''}\t`
+          `GraphQL server ready at \thttp://localhost:${process.env.PORT}/graphql\n`,
+          `API ready on \thttp://localhost:${process.env.PORT}${''}\t`
         ].join('')
       )
       resolve()
