@@ -3,7 +3,6 @@
   "ignore": [".git", "node_modules/**/node_modules", "dist"],
   "verbose": true,
   "execMap": {
-    "ts": "node",
     "js": "node"
   },
 
@@ -18,6 +17,6 @@
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": ".ts, .js, .gql, .graphql",
+  "ext": ".ts, .js, .gql, .graphql, json",
   "exec": "ts-node ./server.ts babel --extensions '.ts'"
 }

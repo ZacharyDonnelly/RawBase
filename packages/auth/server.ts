@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import { createServer } from 'http'
 
+import chalk from 'chalk'
 import express, { urlencoded } from 'express'
 
 import cors from 'cors'
@@ -10,6 +11,7 @@ import morgan from 'morgan'
 import dotenv from 'dotenv'
 
 import { createApolloServer } from './src/graphql'
+import Db from './src/db'
 
 const app = express()
 const httpServer = createServer(app)
@@ -23,16 +25,21 @@ const configureApp = () => {
 }
 
 async function main() {
+  const db = new Db()
   dotenv.config()
   configureApp()
-  await createApolloServer(httpServer, app)
+  await createApolloServer(db, httpServer, app)
 
   await new Promise<void>((resolve) =>
     app.listen({ port: process.env.PORT }, () => {
       console.log(
         [
-          `GraphQL server ready at \thttp://localhost:${process.env.PORT}/graphql\n`,
-          `API ready on \thttp://localhost:${process.env.PORT}${''}\t`
+          chalk.bgBlueBright.white.bold(
+            `GraphQL server ready at \thttp://localhost:${process.env.PORT}/graphql\n`
+          ),
+          chalk.bgWhite.black(
+            `API ready on \thttp://localhost:${process.env.PORT}${''}\t`
+          )
         ].join('')
       )
       resolve()

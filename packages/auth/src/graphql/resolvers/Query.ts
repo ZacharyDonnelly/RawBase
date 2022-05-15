@@ -1,12 +1,23 @@
-const queryUsers = {
+import { QueryResolvers } from '../../resolvers-types.generated'
+
+import { UserResolverContext } from '.'
+
+const queryUsers: QueryResolvers<UserResolverContext> = {
   currentUser: () => ({
     id: '123',
     handle: 'johndoe',
-    createdAt: ''
+    createdAt: '',
+    firstName: '',
+    lastName: '',
+    email: ''
   }),
-  user: (id: number) => ({
+  user: () => ({
     id: '123',
-    handle: 'johndoe'
+    handle: 'johndoe',
+    createdAt: '',
+    firstName: '',
+    lastName: '',
+    email: ''
   }),
   users: () => []
 }
