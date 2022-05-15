@@ -1,5 +1,5 @@
 const User = (sequelize: any, Sequelize: any) => {
-  const User = sequelize.define(
+  const UserModel = sequelize.define(
     'User',
     {
       id: {
@@ -36,7 +36,7 @@ const User = (sequelize: any, Sequelize: any) => {
     {}
   )
 
-  return User
+  return UserModel
 }
 
 export default User

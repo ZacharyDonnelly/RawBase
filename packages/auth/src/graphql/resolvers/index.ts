@@ -1,14 +1,8 @@
 import { Resolvers } from '../../generated/resolvers-types.generated'
 
-import Db from '../../db'
-
 import Query from './Query'
 
-export interface UserResolverContext {
-  db: Db
-}
-
-const resolvers: Resolvers<UserResolverContext> = {
+const resolvers: Resolvers = {
   Query
 }
 

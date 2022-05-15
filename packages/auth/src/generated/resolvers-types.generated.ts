@@ -29,13 +29,13 @@ export type Query = {
 
 export type User = {
   __typename?: 'User'
-  createdAt: Scalars['String']
+  createdAt?: Maybe<Scalars['String']>
   deletedAt?: Maybe<Scalars['String']>
-  email: Scalars['String']
-  firstName: Scalars['String']
-  handle: Scalars['String']
-  id: Scalars['ID']
-  lastName: Scalars['String']
+  email?: Maybe<Scalars['String']>
+  firstName?: Maybe<Scalars['String']>
+  handle?: Maybe<Scalars['String']>
+  id?: Maybe<Scalars['ID']>
+  lastName?: Maybe<Scalars['String']>
   updatedAt?: Maybe<Scalars['String']>
 }
 
@@ -175,13 +175,13 @@ export type UserResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']
 > = {
-  createdAt?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  createdAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   deletedAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  email?: Resolver<ResolversTypes['String'], ParentType, ContextType>
-  firstName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
-  handle?: Resolver<ResolversTypes['String'], ParentType, ContextType>
-  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>
-  lastName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
+  firstName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
+  handle?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
+  id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>
+  lastName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   updatedAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }

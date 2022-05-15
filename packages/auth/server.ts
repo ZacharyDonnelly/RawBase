@@ -10,8 +10,8 @@ import morgan from 'morgan'
 
 import dotenv from 'dotenv'
 
-import { createApolloServer } from './src/graphql'
-import db, { sequelizeConnection } from './src/models'
+import { createApolloServer } from './src/graphql/ApolloServer'
+import db, { sequelizeConnection } from './src/db'
 
 const app = express()
 const httpServer = createServer(app)
@@ -33,6 +33,7 @@ const main = async () => {
   if (process.env.NODE_ENV === 'development') {
     try {
       await sequelizeConnection.authenticate()
+      await sequelizeConnection.sync()
       console.log('Connection has been established successfully.')
     } catch (error) {
       console.error('Unable to connect to the database:', error)

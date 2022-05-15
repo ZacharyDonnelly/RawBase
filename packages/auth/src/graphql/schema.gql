@@ -1,10 +1,10 @@
 type User {
-  id: ID!
-  handle: String!
-  firstName: String!
-  lastName: String!
-  email: String!
-  createdAt: String!
+  id: ID
+  handle: String
+  firstName: String
+  lastName: String
+  email: String
+  createdAt: String
   updatedAt: String
   deletedAt: String
 }
@@ -12,5 +12,5 @@ type User {
 type Query {
   user: User!
   users: [User!]!
-  currentUser: User!
+  currentUser: User
 }

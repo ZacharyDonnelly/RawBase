@@ -1,25 +1,11 @@
 import { QueryResolvers } from '../../generated/resolvers-types.generated'
 
-import { UserResolverContext } from '.'
+import db from '../../db'
 
-const queryUsers: QueryResolvers<UserResolverContext> = {
-  currentUser: () => ({
-    id: '123',
-    handle: 'johndoe',
-    createdAt: '',
-    firstName: '',
-    lastName: '',
-    email: ''
-  }),
-  user: () => ({
-    id: '123',
-    handle: 'johndoe',
-    createdAt: '',
-    firstName: '',
-    lastName: '',
-    email: ''
-  }),
-  users: () => []
+const queryUsers: QueryResolvers = {
+  currentUser: () => db.User.findOne({ where: { id: 1 } }),
+  user: () => db.User.findOne({ where: { id: 2 } }),
+  users: () => db.User.findAll()
 }
 
 export default queryUsers

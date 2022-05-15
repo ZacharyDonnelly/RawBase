@@ -10,10 +10,6 @@ import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 
 import { GRAPHQL_SCHEMA_PATH } from '../constants'
 
-import Db from '../db'
-
-import { UserResolverContext } from './resolvers/index'
-
 import resolvers from './resolvers'
 
 const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
@@ -21,7 +17,7 @@ const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
 })
 
 export async function createApolloServer(
-  db: Db,
+  db: any,
   httpServer: Server,
   app: express.Application
 ): Promise<ApolloServer<ExpressContext>> {
@@ -32,9 +28,10 @@ export async function createApolloServer(
     }),
     introspection: true,
     csrfPrevention: true,
-    context: (): UserResolverContext => ({ db }),
+    context: () => ({ db }),
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
   })
+
   await server.start()
   server.applyMiddleware({ app })
 
