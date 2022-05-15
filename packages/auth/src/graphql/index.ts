@@ -3,16 +3,19 @@ import { Server } from 'http'
 import * as express from 'express'
 
 import { importSchema } from 'graphql-import'
-import { makeExecutableSchema } from '@graphql-tools/schema'
+import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader'
+import { loadSchemaSync } from '@graphql-tools/load'
+import { addResolversToSchema } from '@graphql-tools/schema'
 import { ApolloServer, ExpressContext } from 'apollo-server-express'
 
 import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 
+import { GRAPHQL_SCHEMA_PATH } from '../constants'
+
 import resolvers from './resolvers'
 
-export const schema: any = makeExecutableSchema({
-  typeDefs: importSchema('src/graphql/typeDefs/schema.gql'),
-  resolvers
+const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
+  loaders: [new GraphQLFileLoader()]
 })
 
 export async function createApolloServer(
@@ -20,7 +23,10 @@ export async function createApolloServer(
   app: express.Application
 ): Promise<ApolloServer<ExpressContext>> {
   const server = new ApolloServer({
-    schema,
+    schema: addResolversToSchema({
+      schema: SCHEMA,
+      resolvers: resolvers
+    }),
     introspection: true,
     csrfPrevention: true,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]

@@ -6,3 +6,9 @@ type User {
   email: String!
   password_hash: String
 }
+
+type Query {
+  user: User!
+  users: [User!]!
+  currentUser: User!
+}

@@ -1,5 +1,0 @@
-# import User from 'user.gql'
-
-type Query {
-  user: User
-}
