@@ -6,13 +6,13 @@ module.exports = () => ({
   devtool: 'source-map',
   output: {
     filename: '[chunkhash].js',
-    chunkFilename: '[name].lazy-chunk.js',
+    chunkFilename: '[name].lazy-chunk.js'
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader?modules'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader?modules']
       },
       {
         test: /\.s[ac]ss$/i,
@@ -22,23 +22,23 @@ module.exports = () => ({
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
-    ],
+          'sass-loader'
+        ]
+      }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[contenthash].css',
-      chunkFilename: '[id].[hash].css',
+      chunkFilename: '[id].[hash].css'
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.optimize\.css$/g,
       cssProcessor: require('cssnano'),
       cssProcessorPluginOptions: {
-        preset: ['default', { discardComments: { removeAll: true } }],
+        preset: ['default', { discardComments: { removeAll: true } }]
       },
-      canPrint: true,
-    }),
-  ],
+      canPrint: true
+    })
+  ]
 })

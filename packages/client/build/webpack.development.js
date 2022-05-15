@@ -4,7 +4,7 @@ module.exports = () => ({
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader?modules'],
+        use: ['style-loader', 'css-loader?modules']
       },
       {
         test: /\.s[ac]ss$/i,
@@ -14,9 +14,9 @@ module.exports = () => ({
           // Translates CSS into CommonJS
           'css-loader',
           // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
-    ],
-  },
+          'sass-loader'
+        ]
+      }
+    ]
+  }
 })
