@@ -1,4 +1,4 @@
-import { QueryResolvers } from '../../resolvers-types.generated'
+import { QueryResolvers } from '../../generated/resolvers-types.generated'
 
 import { UserResolverContext } from '.'
 

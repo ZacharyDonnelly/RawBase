@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Sequelize } from 'sequelize'
 import dotenv from 'dotenv'
 
@@ -14,7 +15,17 @@ export const sequelizeConnection = new Sequelize(
   {
     host: String(process.env.DB_HOST),
     port: Number(process.env.DB_PORT),
-    dialect: 'sqlite'
+    dialect: 'sqlite',
+    logging: console.log,
+    define: {
+      freezeTableName: true
+    },
+    pool: {
+      max: 5,
+      min: 0,
+      acquire: 30000,
+      idle: 10000
+    }
   }
 )
 
