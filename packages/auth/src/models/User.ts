@@ -1,11 +1,10 @@
-import * as Sequelize from 'sequelize'
-
-const User = (sequelize: any) => {
+const User = (sequelize: any, Sequelize: any) => {
   const User = sequelize.define(
     'User',
     {
       id: {
         type: Sequelize.INTEGER,
+        unique: true,
         primaryKey: true,
         autoIncrement: true
       },

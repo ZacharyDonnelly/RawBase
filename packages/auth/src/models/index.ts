@@ -3,9 +3,9 @@ import dotenv from 'dotenv'
 
 import User from './User'
 
-const db: any = {}
-
 dotenv.config()
+
+const db: any = {}
 
 export const sequelizeConnection = new Sequelize(
   process.env.DB_DATABASE as string,
@@ -20,8 +20,8 @@ export const sequelizeConnection = new Sequelize(
 const models = [User]
 
 models.forEach((model) => {
-  const sqModel = model(sequelizeConnection)
-  db[sqModel.name] = sqModel
+  const sqlModel = model(sequelizeConnection, Sequelize)
+  db[sqlModel.name] = sqlModel
 })
 
 Object.keys(db).forEach((key) => {

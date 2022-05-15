@@ -12,6 +12,9 @@
 /build
 /dist
 
+# Don't ask
+127.0.0.1
+
 .env
 
 # misc
