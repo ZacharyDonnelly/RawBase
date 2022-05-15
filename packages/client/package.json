@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "codegen": "graphql-codegen --config codegen.yml",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "dev": "yarn run webpack --open --hot",
     "dev:debug": "yarn run debug",
@@ -33,6 +34,8 @@
     ]
   },
   "dependencies": {
+    "@apollo/client": "^3.6.2",
+    "@rawbase/auth-server": ">=1.0.3",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -50,6 +53,8 @@
     "css-loader": "^6.7.1",
     "cssnano": "^5.1.7",
     "file-loader": "^6.2.0",
+    "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "normalize.css": "^8.0.1",
@@ -75,6 +80,11 @@
     "workbox-webpack-plugin": "^6.5.3"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@graphql-codegen/introspection": "2.1.1",
+    "@graphql-codegen/typescript": "2.4.11",
+    "@graphql-codegen/typescript-operations": "2.4.0",
+    "@graphql-codegen/typescript-react-apollo": "3.2.14",
     "@stylelint/prettier-config": "^2.0.0",
     "@types/jest": "^27.4.1",
     "@types/react": "^18.0.8",

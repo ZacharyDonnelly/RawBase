@@ -8,7 +8,7 @@ import { Signup, Login } from '../layouts/Auth'
 const AppRouter: FC = () => (
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/signup" element={<Signup />} />
+    <Route path="/signup" element={<Login />} />
     <Route path="/login" element={<Login />} />
     <Route element={<Err404 />} />
   </Routes>

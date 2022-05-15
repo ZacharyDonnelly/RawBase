@@ -8,10 +8,7 @@
     "yarn lint:prettier:auth"
   ],
   "./packages/client/src/**/*.module.scss": ["yarn lint:prettier:client"],
-  "./packages/client/src/**/*.scss": [
-    "yarn lint:prettier:client",
-    "yarn lint:stylelint:client"
-  ],
+  "./packages/client/src/**/*.scss": ["yarn lint:prettier:client"],
   "./packages/client/src/**/*.ts": [
     "yarn lint:eslint:client",
     "yarn lint:prettier:client"
