@@ -11,7 +11,7 @@ import morgan from 'morgan'
 import dotenv from 'dotenv'
 
 import { createApolloServer } from './src/graphql'
-import Db from './src/db'
+import db, { sequelizeConnection } from './src/models'
 
 const app = express()
 const httpServer = createServer(app)
@@ -25,10 +25,19 @@ const configureApp = () => {
 }
 
 async function main() {
-  const db = new Db()
   dotenv.config()
   configureApp()
   await createApolloServer(db, httpServer, app)
+
+  // Testing SQLITE DB connection on dev
+  if (process.env.NODE_ENV === 'development') {
+    try {
+      await sequelizeConnection.authenticate()
+      console.log('Connection has been established successfully.')
+    } catch (error) {
+      console.error('Unable to connect to the database:', error)
+    }
+  }
 
   await new Promise<void>((resolve) =>
     app.listen({ port: process.env.PORT }, () => {
