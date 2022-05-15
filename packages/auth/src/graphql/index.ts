@@ -20,8 +20,6 @@ const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
   loaders: [new GraphQLFileLoader()]
 })
 
-// const context: () => UserResolverContext = () => ({ db })
-
 export async function createApolloServer(
   db: Db,
   httpServer: Server,
@@ -34,7 +32,7 @@ export async function createApolloServer(
     }),
     introspection: true,
     csrfPrevention: true,
-    context: () => ({ db }),
+    context: (): UserResolverContext => ({ db }),
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
   })
   await server.start()
