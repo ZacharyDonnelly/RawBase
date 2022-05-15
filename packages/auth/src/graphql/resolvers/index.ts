@@ -19,10 +19,6 @@ const getInput = function (args: { input: any }) {
 export default {
   Query: {
     user: (parent: any, args: any, { db }: any, info: any) =>
-      db.getUser(args, info),
-    org: (parent: any, args: any, { db }: any, info: any) =>
-      db.getOrg(args, info),
-    role: (parent: any, args: any, { db }: any, info: any) =>
-      db.getRole(args, info)
+      db.getUser(args, info)
   }
 }

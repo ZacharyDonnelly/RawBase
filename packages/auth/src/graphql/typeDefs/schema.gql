@@ -1,5 +1,5 @@
 # import User from 'user.gql'
 
 type Query {
-  user(query: UserInput): UserOutput
+  user: User
 }

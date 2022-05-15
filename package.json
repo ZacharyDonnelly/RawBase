@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "scripts": {
-    "api": "cd packages/api && yarn dev",
+    "auth": "cd packages/auth  && yarn dev",
     "client": "cd packages/client && yarn start",
     "lint:eslint:client": "cd packages/client && yarn lint:eslint",
     "lint:eslint:auth": "cd packages/auth && yarn lint:eslint",

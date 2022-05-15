@@ -1,24 +1,18 @@
 /* eslint-disable no-console */
-import express, { urlencoded } from 'express'
+import { createServer } from 'http'
 
-import { ApolloServer } from 'apollo-server-express'
+import express, { urlencoded } from 'express'
 
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
 
-import { schema } from './src/graphql'
+import { createApolloServer } from './src/graphql'
 
 const db = {}
 
 const app = express()
-
-const server = new ApolloServer({
-  schema,
-  introspection: true,
-  csrfPrevention: true,
-  context: { db }
-})
+const httpServer = createServer(app)
 
 const configureApp = () => {
   app.disable('x-powered-by')
@@ -28,20 +22,15 @@ const configureApp = () => {
   app.use(urlencoded({ extended: true }))
 }
 
-const startServer = async () => {
-  await server.start()
-  server.applyMiddleware({ app, path: '/graphql' })
-}
-
 async function main() {
   configureApp()
-  await startServer()
+  await createApolloServer(db, httpServer, app)
 
   await new Promise<void>((resolve) =>
     app.listen({ port: 3006 }, () => {
       console.log(
         [
-          `GraphQL server ready at \thttp://localhost:3006${server.graphqlPath}\n`,
+          'GraphQL server ready at \thttp://localhost:3006/graphql\n',
           `API ready on \thttp://localhost:3006${''}\t`
         ].join('')
       )
