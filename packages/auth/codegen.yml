@@ -1,4 +1,4 @@
-schema: ../src/graphql/typeDefs/schema.graphql
+schema: ../src/graphql/schema.gql
 generates:
   ./src/resolvers-types.generated.ts:
     plugins:

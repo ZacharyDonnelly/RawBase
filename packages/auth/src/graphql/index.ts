@@ -25,7 +25,7 @@ export async function createApolloServer(
   const server = new ApolloServer({
     schema: addResolversToSchema({
       schema: SCHEMA,
-      resolvers: resolvers
+      resolvers
     }),
     introspection: true,
     csrfPrevention: true,
