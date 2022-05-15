@@ -24,12 +24,12 @@ const configureApp = () => {
   app.use(urlencoded({ extended: true }))
 }
 
-async function main() {
+const main = async () => {
   dotenv.config()
   configureApp()
   await createApolloServer(db, httpServer, app)
 
-  // Testing SQLITE DB connection on dev
+  // * Testing SQLITE DB connection on dev
   if (process.env.NODE_ENV === 'development') {
     try {
       await sequelizeConnection.authenticate()
