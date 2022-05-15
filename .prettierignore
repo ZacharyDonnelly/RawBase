@@ -6,4 +6,4 @@ nginx/*
 .gitignore
 *.eslintignore
 *.eslintcache
-*.scss
+*.generated.*
