@@ -9,8 +9,6 @@ import morgan from 'morgan'
 
 import { createApolloServer } from './src/graphql'
 
-const db = {}
-
 const app = express()
 const httpServer = createServer(app)
 
@@ -24,7 +22,7 @@ const configureApp = () => {
 
 async function main() {
   configureApp()
-  await createApolloServer(db, httpServer, app)
+  await createApolloServer(httpServer, app)
 
   await new Promise<void>((resolve) =>
     app.listen({ port: 3006 }, () => {

@@ -8,8 +8,6 @@ import { ApolloServer, ExpressContext } from 'apollo-server-express'
 
 import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 
-import db from '../db'
-
 import resolvers from './resolvers'
 
 export const schema: any = makeExecutableSchema({
@@ -18,13 +16,11 @@ export const schema: any = makeExecutableSchema({
 })
 
 export async function createApolloServer(
-  _db: any,
   httpServer: Server,
   app: express.Application
 ): Promise<ApolloServer<ExpressContext>> {
   const server = new ApolloServer({
     schema,
-    context: () => ({ db }),
     introspection: true,
     csrfPrevention: true,
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
