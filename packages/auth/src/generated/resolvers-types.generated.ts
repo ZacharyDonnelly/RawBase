@@ -29,7 +29,6 @@ export type MutationCreateUserArgs = {
   email?: InputMaybe<Scalars['String']>
   firstName?: InputMaybe<Scalars['String']>
   handle?: InputMaybe<Scalars['String']>
-  hash?: InputMaybe<Scalars['String']>
   lastName?: InputMaybe<Scalars['String']>
 }
 

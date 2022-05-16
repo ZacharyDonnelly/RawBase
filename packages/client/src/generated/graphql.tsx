@@ -22,45 +22,141 @@ export type Scalars = {
   Float: number
 }
 
+export type Mutation = {
+  __typename?: 'Mutation'
+  createUser?: Maybe<User>
+}
+
+export type MutationCreateUserArgs = {
+  email?: InputMaybe<Scalars['String']>
+  firstName?: InputMaybe<Scalars['String']>
+  handle?: InputMaybe<Scalars['String']>
+  lastName?: InputMaybe<Scalars['String']>
+}
+
 export type Query = {
   __typename?: 'Query'
-  currentUser: User
+  currentUser?: Maybe<User>
   user: User
   users: Array<User>
 }
 
+export type QueryUserArgs = {
+  id?: InputMaybe<Scalars['String']>
+}
+
 export type User = {
   __typename?: 'User'
-  createdAt: Scalars['String']
-  deletedAt?: Maybe<Scalars['String']>
   email: Scalars['String']
   firstName: Scalars['String']
   handle: Scalars['String']
-  id: Scalars['ID']
+  id?: Maybe<Scalars['ID']>
   lastName: Scalars['String']
-  updatedAt?: Maybe<Scalars['String']>
+}
+
+export type CreateNewUserMutationVariables = Exact<{
+  email: Scalars['String']
+  firstName: Scalars['String']
+  lastName: Scalars['String']
+  handle: Scalars['String']
+}>
+
+export type CreateNewUserMutation = {
+  __typename?: 'Mutation'
+  createUser?: {
+    __typename?: 'User'
+    email: string
+    handle: string
+    firstName: string
+    lastName: string
+  } | null
 }
 
 export type GetCurrentUserQueryVariables = Exact<{ [key: string]: never }>
 
 export type GetCurrentUserQuery = {
   __typename?: 'Query'
-  currentUser: {
+  currentUser?: {
     __typename?: 'User'
-    id: string
+    id?: string | null
     email: string
     handle: string
-    createdAt: string
-  }
+  } | null
 }
 
+export const CreateNewUserDocument = gql`
+  mutation CreateNewUser(
+    $email: String!
+    $firstName: String!
+    $lastName: String!
+    $handle: String!
+  ) {
+    createUser(
+      email: $email
+      firstName: $firstName
+      lastName: $lastName
+      handle: $handle
+    ) {
+      email
+      handle
+      firstName
+      lastName
+    }
+  }
+`
+export type CreateNewUserMutationFn = Apollo.MutationFunction<
+  CreateNewUserMutation,
+  CreateNewUserMutationVariables
+>
+
+/**
+ * __useCreateNewUserMutation__
+ *
+ * To run a mutation, you first call `useCreateNewUserMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateNewUserMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createNewUserMutation, { data, loading, error }] = useCreateNewUserMutation({
+ *   variables: {
+ *      email: // value for 'email'
+ *      firstName: // value for 'firstName'
+ *      lastName: // value for 'lastName'
+ *      handle: // value for 'handle'
+ *   },
+ * });
+ */
+export function useCreateNewUserMutation(
+  baseOptions?: Apollo.MutationHookOptions<
+    CreateNewUserMutation,
+    CreateNewUserMutationVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions }
+
+  return Apollo.useMutation<
+    CreateNewUserMutation,
+    CreateNewUserMutationVariables
+  >(CreateNewUserDocument, options)
+}
+export type CreateNewUserMutationHookResult = ReturnType<
+  typeof useCreateNewUserMutation
+>
+export type CreateNewUserMutationResult =
+  Apollo.MutationResult<CreateNewUserMutation>
+export type CreateNewUserMutationOptions = Apollo.BaseMutationOptions<
+  CreateNewUserMutation,
+  CreateNewUserMutationVariables
+>
 export const GetCurrentUserDocument = gql`
   query GetCurrentUser {
     currentUser {
       id
       email
       handle
-      createdAt
     }
   }
 `

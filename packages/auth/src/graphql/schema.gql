@@ -18,6 +18,5 @@ type Mutation {
     email: String
     firstName: String
     lastName: String
-    hash: String
   ): User
 }
