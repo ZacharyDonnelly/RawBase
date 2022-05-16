@@ -16,5 +16,5 @@
     "useUnknownInCatchVariables": true,
     "noUncheckedIndexedAccess": true
   },
-  "exclude": ["**/node_modules", "**/commitlint.*"]
+  "exclude": ["**/node_modules", "**/commitlint.*", "**/**/dist/**", "**/*.js"]
 }

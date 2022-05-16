@@ -14,6 +14,7 @@ module.exports = {
         'perf',
         'refactor',
         'revert',
+        'sec',
         'test',
         'bug'
       ]
