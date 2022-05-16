@@ -3,7 +3,7 @@ import { Resolvers } from '../../generated/resolvers-types.generated'
 import { DbUser } from '../../db'
 
 import Query from './Queries'
-import Mutation from './Mutations'
+import { User } from './Mutations'
 
 export interface ResolverContext {
   db: any
@@ -12,7 +12,9 @@ export interface ResolverContext {
 
 const resolvers: Resolvers<ResolverContext> = {
   Query,
-  Mutation
+  Mutation: {
+    ...User
+  }
 }
 
 export default resolvers
