@@ -1,11 +1,9 @@
 import { QueryResolvers } from '../../generated/resolvers-types.generated'
 
-import db from '../../db'
-
 const queryUsers: QueryResolvers = {
-  currentUser: () => db.User.findOne({ where: { id: 1 } }),
-  user: () => db.User.findOne({ where: { id: 2 } }),
-  users: () => db.User.findAll()
+  currentUser: async (_, __, ctx) => ctx.db.User.findOne({ where: { id: 1 } }),
+  user: async (_, { id }, ctx) => ctx.db.User.findOne({ where: { id } }),
+  users: async (_, __, ctx) => ctx.db.User.findAll()
 }
 
 export default queryUsers

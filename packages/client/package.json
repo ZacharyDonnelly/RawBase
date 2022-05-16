@@ -1,11 +1,10 @@
 {
   "name": "rawbase",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "codegen": "graphql-codegen --config codegen.yml",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "dev": "yarn run webpack --open --hot",
     "dev:debug": "yarn run debug",
     "lint-staged": "cat .lintstagedrc.json | npx lint-staged --config -",
     "lint:all": "npm-run-all --parallel lint:*",
@@ -18,12 +17,23 @@
     "prod:compress": "yarn run prod --env=production compress",
     "prod:debug": "yarn run debug --env=production",
     "prod:ts": "yarn run prod --env.presets typescript",
-    "start": "webpack-dev-server --env development --hot --open",
-    "webpack": "webpack"
+    "start": "webpack-dev-server --env development --hot --open"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
     "@apollo/client": "^3.6.2",
-    "@rawbase/auth-server": ">=1.0.4",
+    "@rawbase/auth-server": ">=1.0.2",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -90,17 +100,5 @@
     "stylelint-no-unsupported-browser-features": "^5.0.3",
     "stylelint-scss": "^4.2.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   }
 }

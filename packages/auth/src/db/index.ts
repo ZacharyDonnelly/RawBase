@@ -11,9 +11,9 @@ const db: any = {}
 export const sequelizeConnection = new Sequelize(
   String(process.env.DB_DATABASE),
   String(process.env.DB_USERNAME),
-  process.env.DB_PASSWORD,
+  String(process.env.DB_PASSWORD),
   {
-    // host: String(process.env.DB_HOST),
+    host: String(process.env.DB_HOST),
     port: Number(process.env.DB_PORT),
     dialect: 'sqlite',
     logging: console.log,

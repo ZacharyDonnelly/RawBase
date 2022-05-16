@@ -1,8 +1,8 @@
 {
   "name": "@rawbase/auth-server",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
-  "description": "API client for RawBase",
+  "description": "Auth microservice client for RawBase",
   "license": "none",
   "main": "server.ts",
   "scripts": {

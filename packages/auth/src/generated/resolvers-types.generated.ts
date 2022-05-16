@@ -20,23 +20,37 @@ export type Scalars = {
   Float: number
 }
 
+export type Mutation = {
+  __typename?: 'Mutation'
+  createUser?: Maybe<User>
+}
+
+export type MutationCreateUserArgs = {
+  email?: InputMaybe<Scalars['String']>
+  firstName?: InputMaybe<Scalars['String']>
+  handle?: InputMaybe<Scalars['String']>
+  hash?: InputMaybe<Scalars['String']>
+  lastName?: InputMaybe<Scalars['String']>
+}
+
 export type Query = {
   __typename?: 'Query'
-  currentUser: User
+  currentUser?: Maybe<User>
   user: User
   users: Array<User>
 }
 
+export type QueryUserArgs = {
+  id?: InputMaybe<Scalars['String']>
+}
+
 export type User = {
   __typename?: 'User'
-  createdAt?: Maybe<Scalars['String']>
-  deletedAt?: Maybe<Scalars['String']>
-  email?: Maybe<Scalars['String']>
-  firstName?: Maybe<Scalars['String']>
-  handle?: Maybe<Scalars['String']>
+  email: Scalars['String']
+  firstName: Scalars['String']
+  handle: Scalars['String']
   id?: Maybe<Scalars['ID']>
-  lastName?: Maybe<Scalars['String']>
-  updatedAt?: Maybe<Scalars['String']>
+  lastName: Scalars['String']
 }
 
 export type ResolverTypeWrapper<T> = Promise<T> | T
@@ -148,6 +162,7 @@ export type DirectiveResolverFn<
 export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>
   ID: ResolverTypeWrapper<Scalars['ID']>
+  Mutation: ResolverTypeWrapper<{}>
   Query: ResolverTypeWrapper<{}>
   String: ResolverTypeWrapper<Scalars['String']>
   User: ResolverTypeWrapper<User>
@@ -157,17 +172,35 @@ export type ResolversTypes = {
 export type ResolversParentTypes = {
   Boolean: Scalars['Boolean']
   ID: Scalars['ID']
+  Mutation: {}
   Query: {}
   String: Scalars['String']
   User: User
+}
+
+export type MutationResolvers<
+  ContextType = any,
+  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+> = {
+  createUser?: Resolver<
+    Maybe<ResolversTypes['User']>,
+    ParentType,
+    ContextType,
+    Partial<MutationCreateUserArgs>
+  >
 }
 
 export type QueryResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
 > = {
-  currentUser?: Resolver<ResolversTypes['User'], ParentType, ContextType>
-  user?: Resolver<ResolversTypes['User'], ParentType, ContextType>
+  currentUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>
+  user?: Resolver<
+    ResolversTypes['User'],
+    ParentType,
+    ContextType,
+    Partial<QueryUserArgs>
+  >
   users?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType>
 }
 
@@ -175,18 +208,16 @@ export type UserResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']
 > = {
-  createdAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  deletedAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  email?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  firstName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  handle?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
+  email?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  firstName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  handle?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>
-  lastName?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
-  updatedAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
+  lastName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
 export type Resolvers<ContextType = any> = {
+  Mutation?: MutationResolvers<ContextType>
   Query?: QueryResolvers<ContextType>
   User?: UserResolvers<ContextType>
 }

@@ -2,15 +2,13 @@
 import { createServer } from 'http'
 
 import chalk from 'chalk'
+import dotenv from 'dotenv'
 import express, { urlencoded } from 'express'
-
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
 
-import dotenv from 'dotenv'
-
-import { createApolloServer } from './src/graphql/ApolloServer'
+import createApolloServer from './src/apollo'
 import db, { sequelizeConnection } from './src/db'
 
 const app = express()

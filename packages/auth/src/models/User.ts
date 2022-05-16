@@ -17,6 +17,20 @@ const User = (sequelize: any, Sequelize: any) => {
           notEmpty: true
         }
       },
+      firstName: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: true
+        }
+      },
+      lastName: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: true
+        }
+      },
       handle: {
         type: Sequelize.STRING,
         allowNull: false,

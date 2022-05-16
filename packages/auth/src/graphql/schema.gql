@@ -1,16 +1,23 @@
 type User {
   id: ID
-  handle: String
-  firstName: String
-  lastName: String
-  email: String
-  createdAt: String
-  updatedAt: String
-  deletedAt: String
+  handle: String!
+  firstName: String!
+  lastName: String!
+  email: String!
 }
 
 type Query {
-  user: User!
+  user(id: String): User!
   users: [User!]!
   currentUser: User
+}
+
+type Mutation {
+  createUser(
+    handle: String
+    email: String
+    firstName: String
+    lastName: String
+    hash: String
+  ): User
 }

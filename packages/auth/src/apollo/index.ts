@@ -5,18 +5,16 @@ import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader'
 import { loadSchemaSync } from '@graphql-tools/load'
 import { addResolversToSchema } from '@graphql-tools/schema'
 import { ApolloServer, ExpressContext } from 'apollo-server-express'
-
 import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 
 import { GRAPHQL_SCHEMA_PATH } from '../constants'
-
-import resolvers from './resolvers'
+import resolvers from '../graphql/resolvers'
 
 const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
   loaders: [new GraphQLFileLoader()]
 })
 
-export async function createApolloServer(
+async function createApolloServer(
   db: any,
   httpServer: Server,
   app: express.Application
@@ -37,3 +35,5 @@ export async function createApolloServer(
 
   return server
 }
+
+export default createApolloServer
