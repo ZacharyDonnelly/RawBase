@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import { GraphQLResolveInfo } from 'graphql'
 export type Maybe<T> = T | null
 export type InputMaybe<T> = Maybe<T>
