@@ -1,21 +1,20 @@
-import { MutationResolvers } from '../../../generated/resolvers-types.generated'
+import { MutationResolvers } from '../../../generated'
 
 import { ResolverContext } from '..'
 
+import { DbUser } from './../../../db/index'
+
 const mutateUsers: MutationResolvers<ResolverContext> = {
-  createUser: async (_, { email, firstName, handle, lastName }) => {
-    const users: any = []
+  createUser: async (_, { user }): Promise<DbUser> => {
+    const _user: any = {
+      email: user?.email,
+      firstName: user?.firstName,
+      handle: user?.handle,
+      lastName: user?.lastName,
+      password: user?.password
+    }
 
-    await setTimeout(() => {
-      users.push({
-        email,
-        firstName,
-        handle,
-        lastName
-      })
-    }, 1000)
-
-    return users
+    return _user
   }
 
   // TODO Re-add once password hashing is implemented

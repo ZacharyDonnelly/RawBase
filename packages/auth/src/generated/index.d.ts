@@ -25,10 +25,7 @@ export type Mutation = {
 }
 
 export type MutationCreateUserArgs = {
-  email?: InputMaybe<Scalars['String']>
-  firstName?: InputMaybe<Scalars['String']>
-  handle?: InputMaybe<Scalars['String']>
-  lastName?: InputMaybe<Scalars['String']>
+  user?: InputMaybe<UserInput>
 }
 
 export type Query = {
@@ -49,6 +46,15 @@ export type User = {
   handle: Scalars['String']
   id?: Maybe<Scalars['ID']>
   lastName: Scalars['String']
+  password: Scalars['String']
+}
+
+export type UserInput = {
+  email: Scalars['String']
+  firstName: Scalars['String']
+  handle: Scalars['String']
+  lastName: Scalars['String']
+  password: Scalars['String']
 }
 
 export type ResolverTypeWrapper<T> = Promise<T> | T
@@ -164,6 +170,7 @@ export type ResolversTypes = {
   Query: ResolverTypeWrapper<{}>
   String: ResolverTypeWrapper<Scalars['String']>
   User: ResolverTypeWrapper<User>
+  UserInput: UserInput
 }
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -174,6 +181,7 @@ export type ResolversParentTypes = {
   Query: {}
   String: Scalars['String']
   User: User
+  UserInput: UserInput
 }
 
 export type MutationResolvers<
@@ -211,6 +219,7 @@ export type UserResolvers<
   handle?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>
   lastName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  password?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 

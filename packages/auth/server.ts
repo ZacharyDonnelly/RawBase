@@ -31,7 +31,6 @@ const main = async () => {
   if (process.env.NODE_ENV === 'development') {
     try {
       await sequelizeConnection.authenticate()
-      await sequelizeConnection.sync()
       console.log('Connection has been established successfully.')
     } catch (error) {
       console.error('Unable to connect to the database:', error)
@@ -39,22 +38,24 @@ const main = async () => {
   }
 
   await new Promise<void>((resolve) =>
-    app.listen({ port: process.env.PORT }, () => {
-      console.log(
-        [
-          `\n`,
-          chalk.bgBlueBright.white.bold(
-            `GraphQL server  ready at\thttp://localhost:${process.env.PORT}/graphql\n`
-          ),
-          chalk.bgWhite.black(
-            `Rest API server ready at\thttp://localhost:${process.env.PORT}\n`
-          ),
-          chalk.bgMagentaBright.black(
-            `Database server ready at\thttp://localhost:${process.env.DB_PORT}\n`
-          )
-        ].join('')
-      )
-      resolve()
+    sequelizeConnection.sync().then(() => {
+      app.listen({ port: process.env.PORT }, () => {
+        console.log(
+          [
+            `\n`,
+            chalk.bgBlueBright.white.bold(
+              `GraphQL server  ready at\thttp://localhost:${process.env.PORT}/graphql\n`
+            ),
+            chalk.bgWhite.black(
+              `Rest API server ready at\thttp://localhost:${process.env.PORT}\n`
+            ),
+            chalk.bgMagentaBright.black(
+              `Database server ready at\thttp://localhost:${process.env.DB_PORT}\n`
+            )
+          ].join('')
+        )
+        resolve()
+      })
     })
   )
 }

@@ -15,7 +15,7 @@ export interface DbUser extends DbEntity {
   firstName: string
   lastName: string
   handle: string
-  hash: string
+  password: string
 }
 
 const db: any = {}
