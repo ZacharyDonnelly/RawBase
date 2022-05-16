@@ -1,6 +1,6 @@
 {
   "name": "@rawbase/auth-server",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "API client for RawBase",
   "license": "none",
@@ -17,8 +17,6 @@
     "start": "nodemon -e ts,js,graphql -x node ts-node server.ts"
   },
   "dependencies": {
-    "@graphql-codegen/typescript": "^2.4.8",
-    "@graphql-codegen/typescript-resolvers": "^2.6.1",
     "@graphql-tools/graphql-file-loader": "^7.3.12",
     "@graphql-tools/load": "^7.5.11",
     "@graphql-tools/schema": "^8.3.11",
@@ -32,7 +30,6 @@
     "express-graphql": "^0.12.0",
     "graphql": "^16.5.0",
     "graphql-import": "^1.0.2",
-    "graphql-yoga": "^2.6.0",
     "jsonwebtoken": "^8.5.1",
     "pkg-up": "^3.0.0",
     "sequelize": "^6.19.0",
@@ -40,6 +37,7 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.4.8",
     "@graphql-codegen/typescript-resolvers": "^2.6.1",
     "@types/bcrypt": "^3.0.0",
     "@types/cookie-parser": "^1.4.2",

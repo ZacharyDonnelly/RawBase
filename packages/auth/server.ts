@@ -44,11 +44,15 @@ const main = async () => {
     app.listen({ port: process.env.PORT }, () => {
       console.log(
         [
+          `\n`,
           chalk.bgBlueBright.white.bold(
-            `GraphQL server ready at \thttp://localhost:${process.env.PORT}/graphql\n`
+            `GraphQL server  ready at\thttp://localhost:${process.env.PORT}/graphql\n`
           ),
           chalk.bgWhite.black(
-            `API ready on \thttp://localhost:${process.env.PORT}${''}\t`
+            `Rest API server ready at\thttp://localhost:${process.env.PORT}\n`
+          ),
+          chalk.bgMagentaBright.black(
+            `Database server ready at\thttp://localhost:${process.env.DB_PORT}\n`
           )
         ].join('')
       )

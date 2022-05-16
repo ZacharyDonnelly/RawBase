@@ -2,18 +2,18 @@
 import { Sequelize } from 'sequelize'
 import dotenv from 'dotenv'
 
-import User from '../models/User'
+import { User } from '../models'
 
 dotenv.config()
 
 const db: any = {}
 
 export const sequelizeConnection = new Sequelize(
-  process.env.DB_DATABASE as string,
-  process.env.DB_USERNAME as string,
+  String(process.env.DB_DATABASE),
+  String(process.env.DB_USERNAME),
   process.env.DB_PASSWORD,
   {
-    host: String(process.env.DB_HOST),
+    // host: String(process.env.DB_HOST),
     port: Number(process.env.DB_PORT),
     dialect: 'sqlite',
     logging: console.log,
