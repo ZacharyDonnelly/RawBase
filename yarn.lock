@@ -1100,7 +1100,7 @@
     "@babel/types" "^7.9.0"
     debug "^4.1.0"
     globals "^11.1.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
 
 "@babel/traverse@^7.13.0", "@babel/traverse@^7.14.0", "@babel/traverse@^7.16.7", "@babel/traverse@^7.16.8", "@babel/traverse@^7.17.10", "@babel/traverse@^7.17.3", "@babel/traverse@^7.17.9", "@babel/traverse@^7.7.0":
   version "7.17.10"
@@ -1124,7 +1124,7 @@
   integrity sha512-BS9JKfXkzzJl8RluW4JGknzpiUV7ZrvTayM6yfqLTVBEnFtyowVIOu6rqxRd5cVO6yGoWf4T8u8dgK9oB+GCng==
   dependencies:
     "@babel/helper-validator-identifier" "^7.9.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     to-fast-properties "^2.0.0"
 
 "@babel/types@^7.0.0", "@babel/types@^7.16.0", "@babel/types@^7.16.7", "@babel/types@^7.16.8", "@babel/types@^7.17.0", "@babel/types@^7.17.10", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.4.4", "@babel/types@^7.7.0", "@babel/types@^7.9.0":
@@ -1145,7 +1145,7 @@
     "@commitlint/load" "^16.3.0"
     "@commitlint/read" "^16.2.1"
     "@commitlint/types" "^16.2.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     resolve-from "5.0.0"
     resolve-global "1.0.0"
     yargs "^17.0.0"
@@ -1171,7 +1171,7 @@
   integrity sha512-/h+lBTgf1r5fhbDNHOViLuej38i3rZqTQnBTk+xEg+ehOwQDXUuissQ5GsYXXqI5uGy+261ew++sT4EA3uBJ+A==
   dependencies:
     "@commitlint/types" "^16.2.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
 
 "@commitlint/execute-rule@^16.2.1":
   version "16.2.1"
@@ -1217,7 +1217,7 @@
     chalk "^4.0.0"
     cosmiconfig "^7.0.0"
     cosmiconfig-typescript-loader "^2.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     resolve-from "^5.0.0"
     typescript "^4.4.3"
 
@@ -1253,7 +1253,7 @@
     "@commitlint/config-validator" "^16.2.1"
     "@commitlint/types" "^16.2.1"
     import-fresh "^3.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     resolve-from "^5.0.0"
     resolve-global "^1.0.0"
 
@@ -1407,7 +1407,7 @@
     change-case-all "1.0.14"
     common-tags "1.8.2"
     import-from "4.0.0"
-    lodash "~4.17.21"
+    lodash "^4.17.20"
     tslib "~2.3.0"
 
 "@graphql-codegen/schema-ast@^2.4.1":
@@ -1497,7 +1497,7 @@
     aggregate-error "3.0.1"
     camel-case "4.1.1"
     graphql-tools-fork "9.0.1"
-    lodash "4.17.21"
+    lodash "^4.17.20"
 
 "@graphql-toolkit/core@0.10.3":
   version "0.10.3"
@@ -1510,7 +1510,7 @@
     globby "11.0.0"
     import-from "^3.0.0"
     is-glob "4.0.1"
-    lodash "4.17.21"
+    lodash "^4.17.20"
     p-limit "2.3.0"
     resolve-from "5.0.0"
     tslib "1.11.1"
@@ -1729,7 +1729,7 @@
     js-yaml "^4.0.0"
     json-stable-stringify "^1.0.1"
     jsonwebtoken "^8.5.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     replaceall "^0.1.6"
     scuid "^1.1.0"
     tslib "~2.4.0"
@@ -2148,7 +2148,7 @@
     css "^3.0.0"
     css.escape "^1.5.1"
     dom-accessibility-api "^0.5.6"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     redent "^3.0.0"
 
 "@testing-library/react@^13.1.1":
@@ -3485,7 +3485,7 @@ async@^2.6.2:
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
   integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
 
 async@^3.2.3:
   version "3.2.3"
@@ -3520,7 +3520,7 @@ awesome-typescript-loader@^5.2.1:
     chalk "^2.4.1"
     enhanced-resolve "^4.0.0"
     loader-utils "^1.1.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     micromatch "^3.1.9"
     mkdirp "^0.5.1"
     source-map-support "^0.5.3"
@@ -3563,7 +3563,7 @@ babel-core@^6.26.0, babel-core@^6.26.3:
     convert-source-map "^1.5.1"
     debug "^2.6.9"
     json5 "^0.5.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     minimatch "^3.0.4"
     path-is-absolute "^1.0.1"
     private "^0.1.8"
@@ -3592,7 +3592,7 @@ babel-generator@^6.26.0:
     babel-types "^6.26.0"
     detect-indent "^4.0.0"
     jsesc "^1.3.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     source-map "^0.5.7"
     trim-right "^1.0.1"
 
@@ -3834,7 +3834,7 @@ babel-register@^6.26.0:
     babel-runtime "^6.26.0"
     core-js "^2.5.0"
     home-or-tmp "^2.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
@@ -3855,7 +3855,7 @@ babel-template@^6.24.1, babel-template@^6.26.0:
     babel-traverse "^6.26.0"
     babel-types "^6.26.0"
     babylon "^6.18.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
 
 babel-traverse@^6.26.0:
   version "6.26.0"
@@ -3870,7 +3870,7 @@ babel-traverse@^6.26.0:
     debug "^2.6.8"
     globals "^9.18.0"
     invariant "^2.2.2"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
 
 babel-types@^6.26.0:
   version "6.26.0"
@@ -3879,7 +3879,7 @@ babel-types@^6.26.0:
   dependencies:
     babel-runtime "^6.26.0"
     esutils "^2.0.2"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     to-fast-properties "^1.0.3"
 
 babylon@^6.18.0:
@@ -4647,7 +4647,7 @@ concurrently@^7.1.0:
   dependencies:
     chalk "^4.1.0"
     date-fns "^2.16.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     rxjs "^6.6.3"
     spawn-command "^0.0.2-1"
     supports-color "^8.1.0"
@@ -4716,7 +4716,7 @@ conventional-changelog-conventionalcommits@^4.3.1:
   integrity sha512-LTTQV4fwOM4oLPad317V/QNQ1FY4Hju5qeBIM1uTHbrnCE+Eg4CdRZ3gO2pUeR+tzWdp80M2j3qFFEDWVqOV4g==
   dependencies:
     compare-func "^2.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     q "^1.5.1"
 
 conventional-commits-parser@^3.2.2:
@@ -4726,7 +4726,7 @@ conventional-commits-parser@^3.2.2:
   dependencies:
     JSONStream "^1.0.4"
     is-text-path "^1.0.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     meow "^8.0.0"
     split2 "^3.0.0"
     through2 "^4.0.0"
@@ -5705,7 +5705,7 @@ eslint-plugin-flowtype@^8.0.3:
   resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-8.0.3.tgz#e1557e37118f24734aa3122e7536a038d34a4912"
   integrity sha512-dX8l6qUL6O+fYPtpNRideCFSpmWOUVx5QcaGLVqe/vlDiBSe4vYljDWDETwnyFzpl7By/WVIu6rcrniCgH9BqQ==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     string-natural-compare "^3.0.1"
 
 eslint-plugin-import@^2.25.3:
@@ -6532,7 +6532,7 @@ git-raw-commits@^2.0.0:
   integrity sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==
   dependencies:
     dargs "^7.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     meow "^8.0.0"
     split2 "^3.0.0"
     through2 "^4.0.0"
@@ -6970,7 +6970,7 @@ html-webpack-plugin@^5.5.0:
   dependencies:
     "@types/html-minifier-terser" "^6.0.0"
     html-minifier-terser "^6.0.2"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     pretty-error "^4.0.0"
     tapable "^2.0.0"
 
@@ -7265,7 +7265,7 @@ inquirer@^8.0.0:
     cli-width "^3.0.0"
     external-editor "^3.0.3"
     figures "^3.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     mute-stream "0.0.8"
     ora "^5.4.1"
     run-async "^2.4.0"
@@ -8123,7 +8123,7 @@ last-call-webpack-plugin@^3.0.0:
   resolved "https://registry.yarnpkg.com/last-call-webpack-plugin/-/last-call-webpack-plugin-3.0.0.tgz#9742df0e10e3cf46e5c0381c2de90d3a7a2d7555"
   integrity sha512-7KI2l2GIZa9p2spzPIVZBYyNKkN+e/SQPpnjlTiPhdbDW3F86tdKKELxKpzJ5sgU19wQWsACULZmpTPYHeWO5w==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     webpack-sources "^1.1.0"
 
 latest-version@5.1.0, latest-version@^5.1.0:
@@ -9989,7 +9989,7 @@ postcss-sorting@^5.0.1:
   resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-5.0.1.tgz#10d5d0059eea8334dacc820c0121864035bc3f11"
   integrity sha512-Y9fUFkIhfrm6i0Ta3n+89j56EFqaNRdUKqXyRp6kvTcSXnmgEjaVowCXH+JBe9+YKWqd4nc28r2sgwnzJalccA==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     postcss "^7.0.17"
 
 postcss-svgo@^5.1.0:
@@ -10068,7 +10068,7 @@ pretty-error@^4.0.0:
   resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-4.0.0.tgz#90a703f46dd7234adb46d0f84823e9d1cb8f10d6"
   integrity sha512-AoJ5YMAcXKYxKhuJGdcvse+Voc6v1RgnsR3nWcYU7q4t6z0Q6T86sv5Zq8VIRbOWWFpvdGE83LtdSMNd+6Y0xw==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     renderkid "^3.0.0"
 
 pretty-format@^27.0.0, pretty-format@^27.0.2, pretty-format@^27.5.1:
@@ -10543,7 +10543,7 @@ renderkid@^3.0.0:
     css-select "^4.1.3"
     dom-converter "^0.2.0"
     htmlparser2 "^6.1.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     strip-ansi "^6.0.1"
 
 repeat-element@^1.1.2:
@@ -10938,7 +10938,7 @@ sequelize@^6.19.0:
     debug "^4.3.3"
     dottie "^2.0.2"
     inflection "^1.13.2"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     moment "^2.29.1"
     moment-timezone "^0.5.34"
     pg-connection-string "^2.5.0"
@@ -11704,7 +11704,7 @@ stylelint-no-unsupported-browser-features@^5.0.3:
   integrity sha512-FqfbOTk5UEkHsAKOkPH6SvajsfO9YuoWvKxd34tCRBZug9ZNeaPn141nyWkd+ncc8S1gVmO2+O6qVAMj9bvWww==
   dependencies:
     doiuse "^4.4.1"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     postcss "^8.3.6"
 
 stylelint-order@^3.1.1:
@@ -11712,7 +11712,7 @@ stylelint-order@^3.1.1:
   resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-3.1.1.tgz#ba9ea6844d1482f97f31204e7c9605c7b792c294"
   integrity sha512-4gP/r8j/6JGZ/LL41b2sYtQqfwZl4VSqTp7WeIwI67v/OXNQ08dnn64BGXNwAUSgb2+YIvIOxQaMzqMyQMzoyQ==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     postcss "^7.0.17"
     postcss-sorting "^5.0.1"
 
@@ -11721,7 +11721,7 @@ stylelint-scss@^4.0.0, stylelint-scss@^4.2.0:
   resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-4.2.0.tgz#e25fd390ee38a7e89fcfaec2a8f9dce2ec6ddee8"
   integrity sha512-HHHMVKJJ5RM9pPIbgJ/XA67h9H0407G68Rm69H4fzFbFkyDMcTV1Byep3qdze5+fJ3c0U7mJrbj6S0Fg072uZA==
   dependencies:
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     postcss-media-query-parser "^0.2.3"
     postcss-resolve-nested-selector "^0.1.1"
     postcss-selector-parser "^6.0.6"
@@ -12621,7 +12621,7 @@ webpack-bundle-analyzer@^4.5.0:
     chalk "^4.1.0"
     commander "^7.2.0"
     gzip-size "^6.0.0"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     opener "^1.5.2"
     sirv "^1.0.7"
     ws "^7.3.1"
@@ -12891,7 +12891,7 @@ workbox-build@6.5.3:
     fast-json-stable-stringify "^2.1.0"
     fs-extra "^9.0.1"
     glob "^7.1.6"
-    lodash "^4.17.21"
+    lodash "^4.17.20"
     pretty-bytes "^5.3.0"
     rollup "^2.43.1"
     rollup-plugin-terser "^7.0.0"
