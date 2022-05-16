@@ -1,9 +1,16 @@
 import { Resolvers } from '../../generated/resolvers-types.generated'
 
-import Query from './Query'
-import Mutation from './Mutation'
+import { DbUser } from '../../db'
 
-const resolvers: Resolvers = {
+import Query from './Queries'
+import Mutation from './Mutations'
+
+export interface ResolverContext {
+  db: any
+  dbUserCache: Record<string, DbUser>
+}
+
+const resolvers: Resolvers<ResolverContext> = {
   Query,
   Mutation
 }

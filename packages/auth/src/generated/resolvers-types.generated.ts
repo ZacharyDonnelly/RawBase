@@ -33,7 +33,7 @@ export type MutationCreateUserArgs = {
 
 export type Query = {
   __typename?: 'Query'
-  currentUser?: Maybe<User>
+  currentUser: User
   user: User
   users: Array<User>
 }
@@ -192,7 +192,7 @@ export type QueryResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
 > = {
-  currentUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>
+  currentUser?: Resolver<ResolversTypes['User'], ParentType, ContextType>
   user?: Resolver<
     ResolversTypes['User'],
     ParentType,

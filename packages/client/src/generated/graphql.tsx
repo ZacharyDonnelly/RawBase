@@ -35,7 +35,7 @@ export type MutationCreateUserArgs = {
 
 export type Query = {
   __typename?: 'Query'
-  currentUser?: Maybe<User>
+  currentUser: User
   user: User
   users: Array<User>
 }
@@ -57,12 +57,12 @@ export type GetCurrentUserQueryVariables = Exact<{ [key: string]: never }>
 
 export type GetCurrentUserQuery = {
   __typename?: 'Query'
-  currentUser?: {
+  currentUser: {
     __typename?: 'User'
     id?: string | null
     email: string
     handle: string
-  } | null
+  }
 }
 
 export type CreateNewUserMutationVariables = Exact<{

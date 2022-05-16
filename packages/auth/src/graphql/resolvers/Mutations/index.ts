@@ -1,10 +1,9 @@
-import {
-  MutationResolvers,
-  MutationCreateUserArgs
-} from '../../generated/resolvers-types.generated'
+import { MutationResolvers } from '../../../generated/resolvers-types.generated'
 
-const mutateUsers: MutationResolvers<MutationCreateUserArgs> = {
-  createUser: async (_, { email, firstName, handle, lastName }, ctx) => {
+import { ResolverContext } from '..'
+
+const mutateUsers: MutationResolvers<ResolverContext> = {
+  createUser: async (_, { email, firstName, handle, lastName }) => {
     const users: any = []
 
     await setTimeout(() => {

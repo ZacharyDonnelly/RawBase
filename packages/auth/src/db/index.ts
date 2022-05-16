@@ -6,6 +6,18 @@ import { User } from '../models'
 
 dotenv.config()
 
+export interface DbEntity {
+  id: string
+}
+
+export interface DbUser extends DbEntity {
+  email: string
+  firstName: string
+  lastName: string
+  handle: string
+  hash: string
+}
+
 const db: any = {}
 
 export const sequelizeConnection = new Sequelize(

@@ -10,6 +10,8 @@ import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
 import { GRAPHQL_SCHEMA_PATH } from '../constants'
 import resolvers from '../graphql/resolvers'
 
+import { ResolverContext } from './../graphql/resolvers/index'
+
 const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
   loaders: [new GraphQLFileLoader()]
 })
@@ -26,7 +28,7 @@ async function createApolloServer(
     }),
     introspection: true,
     csrfPrevention: true,
-    context: () => ({ db }),
+    context: () => ({ db, dbUserCache: {} } as ResolverContext),
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
   })
 
