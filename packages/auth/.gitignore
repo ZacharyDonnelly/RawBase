@@ -10,6 +10,8 @@ yarn-error.log*
 # Don't ask
 127.0.0.1
 
+/config
+
 # Runtime data
 pids
 *.pid

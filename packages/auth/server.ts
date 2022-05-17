@@ -44,7 +44,9 @@ const main = async () => {
           [
             `\n`,
             chalk.bgBlueBright.white.bold(
-              `GraphQL server  ready at\thttp://localhost:${process.env.PORT}/graphql\n`
+              `GraphQL server ${''} ready at\thttp://localhost:${
+                process.env.PORT
+              }/graphql\n`
             ),
             chalk.bgWhite.black(
               `Rest API server ready at\thttp://localhost:${process.env.PORT}\n`
