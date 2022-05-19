@@ -79,7 +79,7 @@
   },
   "overrides": [
     {
-      "files": ["./packages/**/src/generated/*"],
+      "files": ["./packages/**/src/types/*"],
       "rules": {
         "no-use-before-define": "off",
         "@typescript-eslint/ban-types": "off"

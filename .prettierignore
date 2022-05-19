@@ -4,6 +4,4 @@
 node_modules
 nginx/*
 .gitignore
-*.eslintignore
 *.eslintcache
-*.generated.*

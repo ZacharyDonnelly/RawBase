@@ -1,4 +1,4 @@
-import { MutationResolvers } from '../../../generated'
+import { MutationResolvers } from '../../../types/Apollo'
 
 import { ResolverContext } from '..'
 

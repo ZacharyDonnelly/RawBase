@@ -1,4 +1,4 @@
-import { QueryResolvers } from '../../../generated'
+import { QueryResolvers } from '../../../types/Apollo'
 
 import { DbUser } from '../../../db/index'
 import { ResolverContext } from '..'

@@ -1,4 +1,4 @@
-import { Resolvers } from '../../generated'
+import { Resolvers } from '../../types/Apollo'
 
 import { DbUser } from '../../db'
 

@@ -5,5 +5,5 @@
     "module": "CommonJS",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"]
+  "include": ["src", "server.ts"]
 }
