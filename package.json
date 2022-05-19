@@ -3,23 +3,33 @@
   "version": "1.0.0",
   "private": true,
   "repository": "https://github.com/ZacharyDonnelly/RawBase.git",
+  "license": "MIT",
   "author": "Zachary Donnelly",
   "workspaces": [
-    "packages/*"
+    "packages/api",
+    "packages/auth",
+    "packages/client",
+    "packages/plugins"
   ],
   "scripts": {
-    "auth": "cd packages/auth  && yarn dev",
     "api": "cd packages/api && flask run",
+    "auth": "cd packages/auth  && yarn dev",
+    "clean": "rimraf packages/**/node_modules && rimraf node_modules",
     "client": "cd packages/client && yarn start",
-    "lint:eslint:client": "cd packages/client && yarn lint:eslint",
     "lint:eslint:auth": "cd packages/auth && yarn lint:eslint",
+    "lint:eslint:client": "cd packages/client && yarn lint:eslint",
+    "lint:eslint:plugin": "cd packages/plugins && yarn lint:eslint",
+    "lint:prettier:auth": "cd packages/auth && yarn lint:prettier",
     "lint:prettier:client": "cd packages/client && yarn lint:prettier",
-    "lint:prettier:auth": "cd packages/auth && yarn lint:prettier"
+    "lint:prettier:plugin": "cd packages/plugins && yarn lint:prettier",
+    "plugins": "cd packages/plugins && yarn start"
+  },
+  "dependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-react": "^7.17.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.12",
-    "@babel/preset-env": "^7.17.12",
-    "@babel/preset-react": "^7.17.2",
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^5.24.0",
@@ -34,7 +44,6 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "scriptlint": "^2.1.10",

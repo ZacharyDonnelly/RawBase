@@ -2,6 +2,7 @@
   "name": "rawbase",
   "version": "1.0.2",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "codegen": "graphql-codegen --config codegen.yml",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",

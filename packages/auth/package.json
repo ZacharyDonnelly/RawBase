@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "private": true,
   "description": "Auth microservice client for RawBase",
-  "license": "none",
+  "license": "MIT",
   "main": "server.ts",
   "scripts": {
     "build": "tsc -p .",
@@ -51,7 +51,6 @@
     "dotenv": "^16.0.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.16",
-    "rimraf": "^3.0.2",
     "ts-node": "^10.7.0"
   }
 }

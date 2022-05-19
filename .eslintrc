@@ -79,10 +79,11 @@
   },
   "overrides": [
     {
-      "files": ["./packages/**/src/types/*"],
+      "files": ["./packages/**/types/*"],
       "rules": {
         "no-use-before-define": "off",
-        "@typescript-eslint/ban-types": "off"
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/triple-slash-reference": "off"
       }
     }
   ],
