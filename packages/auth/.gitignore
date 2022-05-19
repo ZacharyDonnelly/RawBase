@@ -7,8 +7,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Don't ask
-127.0.0.1
+**/*.sqlite
 
 /config
 

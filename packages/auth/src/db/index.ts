@@ -1,10 +1,11 @@
 /* eslint-disable no-console */
+import path from 'path'
+
 import { Sequelize } from 'sequelize'
-import dotenv from 'dotenv'
 
 import { User } from '../models'
 
-dotenv.config()
+import { Config } from '../../config'
 
 export interface DbEntity {
   id: string
@@ -21,13 +22,18 @@ export interface DbUser extends DbEntity {
 const db: any = {}
 
 export const sequelizeConnection = new Sequelize(
-  String(process.env.DB_DATABASE),
-  String(process.env.DB_USERNAME),
+  Config.database,
+  Config.username,
   '',
   {
-    host: String(process.env.DB_HOST),
-    port: Number(process.env.DB_PORT),
-    dialect: 'sqlite',
+    host: Config.host,
+    port: Config.port,
+    dialect: Config.dialect,
+    storage: path.join(
+      __dirname,
+      '../db',
+      `${process.env.DB_DATABASE}.${process.env.DB_DIALECT}`
+    ),
     logging: console.log,
     define: {
       freezeTableName: true
@@ -44,8 +50,8 @@ export const sequelizeConnection = new Sequelize(
 const models = [User]
 
 models.forEach((model) => {
-  const sqlModel = model(sequelizeConnection, Sequelize)
-  db[sqlModel.name] = sqlModel
+  const dbModel = model(sequelizeConnection, Sequelize)
+  db[dbModel.name] = dbModel
 })
 
 Object.keys(db).forEach((key) => {
