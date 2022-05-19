@@ -52,7 +52,7 @@ const main = async () => {
               `Rest API server ready at\thttp://localhost:${process.env.PORT}\n`
             ),
             chalk.bgMagentaBright.black(
-              `Database server ready at\thttp://localhost:${process.env.DB_PORT}\n`
+              `Database server ready at\tsqlite://127.0.0.1:${process.env.DB_PORT}\n`
             )
           ].join('')
         )

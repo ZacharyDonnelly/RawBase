@@ -24,7 +24,7 @@ const db: any = {}
 export const sequelizeConnection = new Sequelize(
   Config.database,
   Config.username,
-  '',
+  Config.password,
   {
     host: Config.host,
     port: Config.port,

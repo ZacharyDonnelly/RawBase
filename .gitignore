@@ -17,6 +17,9 @@
 
 .env
 
+**/seeders/*.js
+**/migrations/*.js
+
 # misc
 .DS_Store
 .env.local
