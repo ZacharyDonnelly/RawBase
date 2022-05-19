@@ -83,3 +83,5 @@ production.db
 *.db
 *db.*
 *Db.*
+
+*.sqlite

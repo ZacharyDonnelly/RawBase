@@ -5,15 +5,15 @@ import { ResolverContext } from '..'
 import { DbUser } from './../../../db/index'
 
 const mutateUsers: MutationResolvers<ResolverContext> = {
-  createUser: async (_, { user }, ctx): Promise<DbUser> =>
+  createUser: async (_, { user }, { db }): Promise<DbUser> =>
     // TODO Hash passwords after seeding
-    ctx.db.User.create({
+    db.User.create({
       handle: user?.handle,
       email: user?.email,
       firstName: user?.firstName,
       lastName: user?.lastName,
       hash: user?.password
-    })
+    }).then(() => db.save())
 }
 
 export default mutateUsers

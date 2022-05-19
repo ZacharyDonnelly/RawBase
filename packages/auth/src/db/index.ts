@@ -29,11 +29,7 @@ export const sequelizeConnection = new Sequelize(
     host: Config.host,
     port: Config.port,
     dialect: Config.dialect,
-    storage: path.join(
-      __dirname,
-      '../db',
-      `${process.env.DB_DATABASE}.${process.env.DB_DIALECT}`
-    ),
+    storage: Config.storage,
     logging: console.log,
     define: {
       freezeTableName: true

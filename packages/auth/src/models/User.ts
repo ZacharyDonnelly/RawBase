@@ -1,5 +1,5 @@
 const User = (sequelize: any, Sequelize: any) => {
-  const UserModel = sequelize.define(
+  const User = sequelize.define(
     'User',
     {
       id: {
@@ -40,17 +40,32 @@ const User = (sequelize: any, Sequelize: any) => {
         }
       },
       hash: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(64),
         allowNull: false,
         validate: {
-          notEmpty: true
+          notEmpty: true,
+          is: /^[0-9a-f]{64}$/i
         }
+      },
+      createdAt: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
+        allowNull: false
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW,
+        allowNull: false
       }
     },
-    {}
+    {
+      sequelize,
+      tableName: 'User',
+      modelName: 'User'
+    }
   )
 
-  return UserModel
+  return User
 }
 
 export default User

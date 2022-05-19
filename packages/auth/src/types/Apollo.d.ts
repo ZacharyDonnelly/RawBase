@@ -41,12 +41,14 @@ export type QueryUserArgs = {
 
 export type User = {
   __typename?: 'User'
+  createdAt?: Maybe<Scalars['String']>
   email: Scalars['String']
   firstName: Scalars['String']
   handle: Scalars['String']
   id?: Maybe<Scalars['ID']>
   lastName: Scalars['String']
   password: Scalars['String']
+  updatedAt?: Maybe<Scalars['String']>
 }
 
 export type UserInput = {
@@ -214,12 +216,14 @@ export type UserResolvers<
   ContextType = any,
   ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']
 > = {
+  createdAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   email?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   firstName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   handle?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   id?: Resolver<Maybe<ResolversTypes['ID']>, ParentType, ContextType>
   lastName?: Resolver<ResolversTypes['String'], ParentType, ContextType>
   password?: Resolver<ResolversTypes['String'], ParentType, ContextType>
+  updatedAt?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>
 }
 
