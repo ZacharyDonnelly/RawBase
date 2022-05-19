@@ -1,6 +1,4 @@
 /* eslint-disable no-console */
-import path from 'path'
-
 import { Sequelize } from 'sequelize'
 
 import { User } from '../models'
