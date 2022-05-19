@@ -6,10 +6,7 @@
   "license": "MIT",
   "author": "Zachary Donnelly",
   "workspaces": [
-    "packages/api",
-    "packages/auth",
-    "packages/client",
-    "packages/plugins"
+    "packages/*"
   ],
   "scripts": {
     "api": "cd packages/api && flask run",
