@@ -13,7 +13,7 @@ const mutateUsers: MutationResolvers<ResolverContext> = {
       firstName: user?.firstName,
       lastName: user?.lastName,
       hash: user?.password
-    }).then(() => db.save())
+    })
 }
 
 export default mutateUsers

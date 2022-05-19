@@ -39,12 +39,12 @@ const User = (sequelize: any, Sequelize: any) => {
           notEmpty: true
         }
       },
+      // TODO BETTER VALIDATION
       hash: {
-        type: Sequelize.STRING(64),
+        type: Sequelize.STRING,
         allowNull: false,
         validate: {
-          notEmpty: true,
-          is: /^[0-9a-f]{64}$/i
+          notEmpty: true
         }
       },
       createdAt: {
