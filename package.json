@@ -15,10 +15,10 @@
     "client": "cd packages/client && yarn start",
     "lint:eslint:auth": "cd packages/auth && yarn lint:eslint",
     "lint:eslint:client": "cd packages/client && yarn lint:eslint",
-    "lint:eslint:plugin": "cd packages/plugins && yarn lint:eslint",
+    "lint:eslint:common": "cd packages/common && yarn lint:eslint",
     "lint:prettier:auth": "cd packages/auth && yarn lint:prettier",
     "lint:prettier:client": "cd packages/client && yarn lint:prettier",
-    "lint:prettier:plugin": "cd packages/plugins && yarn lint:prettier",
+    "lint:prettier:common": "cd packages/common && yarn lint:prettier",
     "plugins": "cd packages/plugins && yarn start"
   },
   "dependencies": {
