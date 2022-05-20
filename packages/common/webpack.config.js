@@ -102,7 +102,12 @@ module.exports = {
   },
   plugins,
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    plugins: [new TsconfigPathsPlugin()],
+    extensions: ['*', '.ts', '.tsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@assets': path.resolve(__dirname, 'src/assets')
+    }
   },
   externals: ['react', 'react-dom', 'classnames']
 }

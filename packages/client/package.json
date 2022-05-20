@@ -35,7 +35,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.2",
     "@rawbase/auth-server": "^1.2.1",
-    "@rawbase/plugins": "^1.0.0",
+    "@rawbase/common": "^1.0.0",
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",

@@ -1,8 +1,8 @@
 {
-  "name": "@rawbase/plugins",
+  "name": "@rawbase/common",
   "version": "1.0.0",
   "private": true,
-  "description": "Code editor plugins",
+  "description": "Reusable components for use globally",
   "license": "MIT",
   "author": "Zachary Donnelly",
   "typings": "dist/index.d.ts",

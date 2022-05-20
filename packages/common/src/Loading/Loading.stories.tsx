@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf, addDecorator } from '@storybook/react'
 // import { withA11y } from '@storybook/addon-a11y'
 
-import Loading from './'
+import Loading from '.'
 
 // addDecorator(withA11y)
 

@@ -7,9 +7,8 @@
     "declaration": true,
     "jsx": "react"
   },
-  // TODO - Fix paths
   "paths": {
-    "@/*": ["./src"],
+    "@": ["src"],
     "@/components": ["src/components/*"]
   },
   "include": ["**/src/**/*", "**/types/*"],
