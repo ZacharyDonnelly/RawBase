@@ -22,11 +22,12 @@ if (process.env.SHOW_BUNDLE === 'true') {
   plugins.push(new BundleAnalyzerPlugin())
 }
 
+// TODO - Obviously pick a bundler lol - if staying with webpack, fix this
+
 module.exports = {
   entry: './src/export.ts',
   devServer: {
-    historyApiFallback: true,
-    port: 3000
+    historyApiFallback: true
   },
   mode: 'development',
   devtool: 'inline-source-map',

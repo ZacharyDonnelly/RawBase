@@ -54,4 +54,5 @@ declare module '*.svg' {
 }
 
 declare module '*.module.scss'
+declare module '@hot-loader/react-dom'
 declare module 'react-router-dom'
