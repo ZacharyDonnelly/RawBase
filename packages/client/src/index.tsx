@@ -9,7 +9,7 @@ import { store } from '../store'
 
 import AppRouter from './routes'
 
-import { client } from './utils/lib/ApolloClient'
+import { client } from './utils/lib'
 
 const container = document.getElementById('root')!
 const root = createRoot(container)

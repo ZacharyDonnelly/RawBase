@@ -1,3 +1,3 @@
-export { default as HorizontalRule } from './HorizontalRule'
-export { default as InputLabel } from './InputLabel'
-export { default as Loading } from './Loading'
+export { default as HorizontalRule } from './components/HorizontalRule'
+export { default as InputLabel } from './components/InputLabel'
+export { default as Loading } from './components/Loading'

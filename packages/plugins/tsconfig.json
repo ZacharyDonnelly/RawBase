@@ -1,12 +1,16 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "dist",
     "declaration": true,
     "jsx": "react"
   },
+  // TODO - Fix paths
   "paths": {
-    "@/*": ["src/*"]
+    "@/*": ["./src"],
+    "@/components": ["src/components/*"]
   },
-  "include": ["**/src/**/*", "**/types/*"]
+  "include": ["**/src/**/*", "**/types/*"],
+  "exclude": ["**/export.ts"]
 }
