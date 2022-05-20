@@ -3,7 +3,6 @@
   "compilerOptions": {
     "baseUrl": "./",
     "target": "ES5",
-    "resolveJsonModule": true,
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["*"],

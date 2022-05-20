@@ -23,8 +23,13 @@ if (process.env.SHOW_BUNDLE === 'true') {
 }
 
 module.exports = {
-  mode: 'production',
-  entry: ['./src/export.ts'],
+  entry: './src/export.ts',
+  devServer: {
+    historyApiFallback: true,
+    port: 3000
+  },
+  mode: 'development',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -94,7 +99,6 @@ module.exports = {
     minimize: true,
     minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()]
   },
-  devtool: 'source-map',
   plugins,
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json']
