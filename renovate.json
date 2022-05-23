@@ -1,4 +1,5 @@
 {
+  "extends": ["config:base"],
   "packageRules": [
     {
       "description": "Automatically merge minor and patch-level updates",
