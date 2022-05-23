@@ -1,5 +1,36 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "description": "Automatically merge minor and patch-level updates",
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "prCreation": "immediate",
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchPackagePatterns": ["eslint"],
+      "labels": ["linting"]
+    },
+    {
+      "matchPackagePatterns": ["prettier"],
+      "labels": ["formatting"]
+    },
+    {
+      "matchDepTypes": ["optionalDependencies"],
+      "addLabels": ["optional"]
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "addLabels": ["devDependencies"]
+    },
+    {
+      "matchDepTypes": ["peerDependencies"],
+      "addLabels": ["peerDependencies"]
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "addLabels": ["core_dependencies"]
+    }
   ]
 }
