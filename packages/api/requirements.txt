@@ -21,7 +21,7 @@ pipenv==2022.1.8
 platformdirs==2.5.2
 pycodestyle==2.8.0
 pyflakes==2.4.0
-pylint==2.12.2
+pylint==2.13.9
 python-dotenv==0.19.2
 python-http-client==3.3.7
 sendgrid==6.9.7
