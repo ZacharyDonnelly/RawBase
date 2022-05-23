@@ -1,36 +1,25 @@
 import babel from '@rollup/plugin-babel'
-// import eslint from '@rollup/plugin-eslint'
-// import image from '@rollup/plugin-image'
 import resolve from '@rollup/plugin-node-resolve'
-import typescript from 'rollup-plugin-typescript2'
-// import typescriptRollup from '@rollup/plugin-typescript'
-// import url from '@rollup/plugin-url'
+import typescript from '@rollup/plugin-typescript'
 import commonjs from '@rollup/plugin-commonjs'
 import styles from 'rollup-plugin-styles'
 
-// import { createBasicConfig } from '@open-wc/building-rollup'
-// import merge from 'deepmerge'
-
 import pkg from './package.json'
 
-// const baseConfig = createBasicConfig({
-//   developmentMode: process.env.ROLLUP_WATCH === 'true',
-// })
-
 export default {
-  input: 'src/export.ts',
+  input: 'src/main.ts',
   output: [
     {
       file: pkg.main,
       format: 'cjs',
       exports: 'named',
-      sourcemap: true
+      inlineSourceMap: true
     },
     {
       file: pkg.module,
       format: 'es',
       exports: 'named',
-      sourcemap: true
+      inlineSourceMap: true
     }
   ],
   external: ['react'],
