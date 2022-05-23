@@ -5,16 +5,19 @@
     "sourceMap": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "noEmit": false,
     "allowJs": true,
     "removeComments": false,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "useUnknownInCatchVariables": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": false,
+    "module": "umd",
+    "skipLibCheck": true
   },
-  "exclude": ["**/node_modules", "**/commitlint.*", "**/**/dist/**", "**/*.js"]
+  "exclude": ["**/node_modules", "**/commitlint.*", "**/dist/**/*", "**/*.js"]
 }

@@ -1,6 +1,7 @@
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
+/// <reference types="classnames" />
 
 declare namespace NodeJS {
   interface ProcessEnv {
@@ -36,8 +37,8 @@ declare module '*.webp' {
   const src: string
   export default src
 }
-declare module '*.module.scss' {
-  const classes: { [key: string]: string }
+declare module '*.module.css' {
+  const classes: { readonly [key: string]: string }
   export default classes
 }
 
@@ -52,4 +53,6 @@ declare module '*.svg' {
   export default src
 }
 
+declare module '*.module.scss'
+declare module '@hot-loader/react-dom'
 declare module 'react-router-dom'

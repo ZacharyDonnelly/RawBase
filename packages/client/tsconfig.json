@@ -1,14 +1,8 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable"],
-    "outDir": "dist",
-    "baseUrl": "./src",
-    "target": "es5",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
+    "baseUrl": "./",
+    "target": "ES5",
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["*"],

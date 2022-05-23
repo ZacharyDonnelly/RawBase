@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "dist",
+    "module": "umd",
+    "declaration": true,
+    "jsx": "react"
+  },
+  "paths": {
+    "@": ["src"],
+    "@/components": ["src/components/*"]
+  },
+  "include": ["**/src/**/*", "**/types/*"],
+  "exclude": ["**/export.ts"]
+}

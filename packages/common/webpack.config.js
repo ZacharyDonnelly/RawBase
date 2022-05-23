@@ -22,9 +22,15 @@ if (process.env.SHOW_BUNDLE === 'true') {
   plugins.push(new BundleAnalyzerPlugin())
 }
 
+// TODO - Obviously pick a bundler lol - if staying with webpack, fix this
+
 module.exports = {
-  mode: 'production',
-  entry: ['./src/export.ts'],
+  entry: './src/export.ts',
+  devServer: {
+    historyApiFallback: true
+  },
+  mode: 'development',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -94,10 +100,14 @@ module.exports = {
     minimize: true,
     minimizer: [new TerserJSPlugin(), new OptimizeCSSAssetsPlugin()]
   },
-  devtool: 'source-map',
   plugins,
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    plugins: [new TsconfigPathsPlugin()],
+    extensions: ['*', '.ts', '.tsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@assets': path.resolve(__dirname, 'src/assets')
+    }
   },
   externals: ['react', 'react-dom', 'classnames']
 }
