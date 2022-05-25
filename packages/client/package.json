@@ -90,7 +90,7 @@
     "@typescript-eslint/parser": "5.25.0",
     "classnames": "2.3.1",
     "postcss-html": "1.4.1",
-    "sass": "1.52.0",
+    "sass": "1.52.1",
     "stylelint": "14.8.2",
     "stylelint-a11y": "1.2.3",
     "stylelint-config-idiomatic-order": "8.1.0",

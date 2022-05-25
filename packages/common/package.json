@@ -72,6 +72,6 @@
     "@storybook/addon-viewport": "6.5.3",
     "@storybook/react": "6.5.3",
     "@types/classnames": "2.3.1",
-    "sass": "1.52.0"
+    "sass": "1.52.1"
   }
 }
