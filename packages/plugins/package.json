@@ -1,0 +1,7 @@
+{
+  "name": "plugins",
+  "version": "1.0.0",
+  "author": "Zachary Donnelly",
+  "license": "MIT",
+  "packageManager": "yarn@4.0.0-rc.6"
+}

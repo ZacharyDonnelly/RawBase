@@ -13,6 +13,7 @@
     "esbenp.prettier-vscode",
     // Lint markdown in README files
     // https://github.com/DavidAnson/vscode-markdownlint
-    "DavidAnson.vscode-markdownlint"
+    "DavidAnson.vscode-markdownlint",
+    "arcanis.vscode-zipfs"
   ]
 }

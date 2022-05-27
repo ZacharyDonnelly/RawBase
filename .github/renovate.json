@@ -2,9 +2,6 @@
   "extends": ["config:base", ":semanticCommits"],
   "packageRules": [
     {
-      "prCreation": "immediate"
-    },
-    {
       "description": "Automatically merge minor and patch-level updates",
       "updateTypes": ["patch", "pin", "digest"],
       "automerge": true

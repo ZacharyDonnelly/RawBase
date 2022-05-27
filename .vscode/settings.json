@@ -4,8 +4,18 @@
   "stylelint.enable": true,
   "css.validate": false,
   "scss.validate": false,
-  "stylelint.snippet": ["css", "less", "postcss", "scss"],
-  "stylelint.validate": ["css", "less", "postcss", "scss"],
+  "stylelint.snippet": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss"
+  ],
   // VETUR
   // Disable rules if user has extension installed and enabled.
   // ----------------------------------------
@@ -16,14 +26,6 @@
     "**/dist": true,
     "**/coverage": true
   },
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/coverage": true,
-    "**/dist": true,
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-
   // Defaults override:
   "vetur.validation.style": false,
   "vetur.validation.script": true,
@@ -34,7 +36,6 @@
     "i18n": "json",
     "router": "js"
   },
-
   // Disables default checks:
   "less.validate": false,
   // EDITOR
@@ -70,20 +71,35 @@
   // ----------------------------------------
   // Linting:,
   "eslint.validate": [
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true },
-    { "language": "javascript", "autoFix": true }
+    "typescript",
+    "typescriptreact",
+    "javascript"
   ],
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
   "eslint.options": {
-    "extensions": [".html", ".js", ".ts"]
+    "extensions": [
+      ".html",
+      ".js",
+      ".ts"
+    ]
   },
   "json.format.enable": true,
   "javascript.validate.enable": true,
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  // YARN
+  // ----------------------------------------
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }

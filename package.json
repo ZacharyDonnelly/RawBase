@@ -6,26 +6,31 @@
   "license": "MIT",
   "author": "Zachary Donnelly",
   "workspaces": [
-    "packages/*"
+    "packages/api",
+    "packages/auth",
+    "packages/client",
+    "packages/common",
+    "packages/plugins"
   ],
   "scripts": {
-    "api": "cd packages/api && flask run",
-    "auth": "cd packages/auth  && yarn dev",
-    "clean": "rimraf packages/**/node_modules && rimraf node_modules",
-    "client": "cd packages/client && yarn start",
-    "common": "cd packages/plugins && yarn start",
+    "api": "cd ./packages/api && flask run",
+    "auth": "cd ./packages/auth  && yarn dev",
+    "clean": "rimraf node_modules && yarn cache clean",
+    "client": "cd ./packages/client && yarn start",
+    "common": "cd ./packages/plugins && yarn start",
     "lint:docs": "yarn markdownlint README.md",
-    "lint:eslint:auth": "cd packages/auth && yarn lint:eslint",
-    "lint:eslint:client": "cd packages/client && yarn lint:eslint",
-    "lint:eslint:common": "cd packages/common && yarn lint:eslint",
-    "lint:prettier:auth": "cd packages/auth && yarn lint:prettier",
-    "lint:prettier:client": "cd packages/client && yarn lint:prettier",
-    "lint:prettier:common": "cd packages/common && yarn lint:prettier"
+    "lint:eslint:auth": "cd ./packages/auth && yarn lint:eslint",
+    "lint:eslint:client": "cd ./packages/client && yarn lint:eslint",
+    "lint:eslint:common": "cd ./packages/common && yarn lint:eslint",
+    "lint:prettier:auth": "cd ./packages/auth && yarn lint:prettier",
+    "lint:prettier:client": "cd ./packages/client && yarn lint:prettier",
+    "lint:prettier:common": "cd ./packages/common && yarn lint:prettier"
   },
   "dependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
-    "@babel/preset-react": "^7.17.12"
+    "@babel/preset-react": "^7.17.12",
+    "typescript": "^4.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.1",
@@ -45,14 +50,19 @@
     "@types/rimraf": "^3.0.2",
     "@types/semantic-release": "^17.2.3",
     "@types/webpack-env": "^1.17.0",
-    "@typescript-eslint/eslint-plugin": "^5.25.0",
-    "@typescript-eslint/parser": "^5.25.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "@yarnpkg/plugin-dlx": "^4.0.0-rc.6",
+    "@yarnpkg/sdks": "^3.0.0-rc.6",
+    "classnames": "^2.3.1",
     "concurrently": "^7.2.1",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react": "^1.1.7",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
@@ -61,11 +71,11 @@
     "markdownlint-cli": "^0.31.1",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
+    "sass": "^1.52.1",
     "scriptlint": "^2.1.10",
-    "semantic-release": "^19.0.2",
-    "semver": "^7.3.7",
-    "typescript": "^4.6.4"
+    "semantic-release": "^19.0.2"
   },
+  "packageManager": "yarn@4.0.0-rc.6",
   "engines": {
     "node": "^14.13.1 || >=16.0.0"
   },
