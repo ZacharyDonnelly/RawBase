@@ -3612,24 +3612,24 @@
     prop-types "^15.7.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-storysource@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.3.21.tgz#1c958f0b91128cc1d0410c0660422adfe3b876fb"
-  integrity sha512-xndADOr74/Jf6Dy5bzV/cxmmXZBk4nted5O2fPGGnNIyvG24TPnJcQvPQfiHcC1Br/wW3HMgBcyQp3cT+UhXcg==
+"@storybook/addon-storysource@6.5.5":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-6.5.5.tgz#957687dc3074350902924a1640f3b7415772b6ca"
+  integrity sha512-5ROIbnEkGqW7R5S1DJNMSPh9m5Lj74f3478sw1ffU1FjyIyhqjyGzpWwSKGRzkRH8ytEozgmPX0Vg2BU2PXA6A==
   dependencies:
-    "@storybook/addons" "5.3.21"
-    "@storybook/components" "5.3.21"
-    "@storybook/router" "5.3.21"
-    "@storybook/source-loader" "5.3.21"
-    "@storybook/theming" "5.3.21"
-    core-js "^3.0.1"
-    estraverse "^4.2.0"
-    loader-utils "^1.2.3"
-    prettier "^1.16.4"
+    "@storybook/addons" "6.5.5"
+    "@storybook/api" "6.5.5"
+    "@storybook/client-logger" "6.5.5"
+    "@storybook/components" "6.5.5"
+    "@storybook/router" "6.5.5"
+    "@storybook/source-loader" "6.5.5"
+    "@storybook/theming" "6.5.5"
+    core-js "^3.8.2"
+    estraverse "^5.2.0"
+    loader-utils "^2.0.0"
     prop-types "^15.7.2"
-    react-syntax-highlighter "^11.0.2"
-    regenerator-runtime "^0.13.3"
-    util-deprecate "^1.0.2"
+    react-syntax-highlighter "^15.4.5"
+    regenerator-runtime "^0.13.7"
 
 "@storybook/addon-viewport@6.5.5":
   version "6.5.5"
@@ -4282,21 +4282,21 @@
     core-js "^3.6.5"
     find-up "^4.1.0"
 
-"@storybook/source-loader@5.3.21":
-  version "5.3.21"
-  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.3.21.tgz#d5f8758fc6b2d9f0ca45e2ffbffa513d5151fd9e"
-  integrity sha512-kzaxvmWhRdkgp7a/XhsHxOB1D3XOkA8kmFahMAJD506hts8he+G2QSaj3BosOFCxa2OYAxbcIBs3JFyaXQGJ0A==
+"@storybook/source-loader@6.5.5":
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-6.5.5.tgz#47fc27a5bbb27661413ed45c5cf1ce9e271eb676"
+  integrity sha512-u0ux755kIUrB+QFkkG6rzQbOADlntn7PsdZOXU0Q+SbqYIsCznqDQKNDROveuzxiKrchylwpWGroY0mDtmYkdg==
   dependencies:
-    "@storybook/addons" "5.3.21"
-    "@storybook/client-logger" "5.3.21"
-    "@storybook/csf" "0.0.1"
-    core-js "^3.0.1"
-    estraverse "^4.2.0"
-    global "^4.3.2"
-    loader-utils "^1.2.3"
-    prettier "^1.16.4"
-    prop-types "^15.7.2"
-    regenerator-runtime "^0.13.3"
+    "@storybook/addons" "6.5.5"
+    "@storybook/client-logger" "6.5.5"
+    "@storybook/csf" "0.0.2--canary.4566f4d.1"
+    core-js "^3.8.2"
+    estraverse "^5.2.0"
+    global "^4.4.0"
+    loader-utils "^2.0.0"
+    lodash "^4.17.21"
+    prettier ">=2.2.1 <=2.3.0"
+    regenerator-runtime "^0.13.7"
 
 "@storybook/store@6.5.5":
   version "6.5.5"
@@ -9824,7 +9824,7 @@ esrecurse@^4.1.0, esrecurse@^4.3.0:
   dependencies:
     estraverse "^5.2.0"
 
-estraverse@^4.1.1, estraverse@^4.2.0:
+estraverse@^4.1.1:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.3.0.tgz#398ad3f3c5a24948be7725e83d11a7de28cdbd1d"
   integrity sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
@@ -15844,11 +15844,6 @@ prettier@2.6.2:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.0.tgz#b6a5bf1284026ae640f17f7ff5658a7567fc0d18"
   integrity sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==
 
-prettier@^1.16.4:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
-  integrity sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==
-
 pretty-bytes@^5.3.0, pretty-bytes@^5.4.1:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
@@ -16631,7 +16626,7 @@ regenerator-runtime@^0.11.0:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
   integrity sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==
 
-regenerator-runtime@^0.13.3, regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
+regenerator-runtime@^0.13.4, regenerator-runtime@^0.13.7:
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
