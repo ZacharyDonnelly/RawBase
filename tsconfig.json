@@ -6,8 +6,10 @@
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "isolatedModules": true,
-    "noEmit": false,
-    "allowJs": true,
+    "noEmit": true,
+    "allowJs": false,
+    "checkJs": false,
+    "importHelpers": true, // Use tslib instead of adding helpers to every emitted js file
     "removeComments": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
