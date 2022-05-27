@@ -81,7 +81,7 @@
     "postcss-scss": "^4.0.4",
     "webpack": "^5.72.1"
   },
-  "packageManager": "yarn@4.0.0-rc.6",
+  "packageManager": "yarn@2.4.3",
   "engines": {
     "node": "^14.13.1 || >=16.0.0"
   },
