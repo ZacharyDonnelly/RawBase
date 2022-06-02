@@ -5,6 +5,7 @@
     "outDir": "dist",
     "module": "umd",
     "declaration": true,
+    "declarationMap": true,
     "jsx": "react"
   },
   "paths": {

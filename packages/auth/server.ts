@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import { createServer } from 'http'
 
-import chalk from 'chalk'
+// ts-ignore
 import dotenv from 'dotenv'
 import express, { urlencoded } from 'express'
 import cors from 'cors'
@@ -10,6 +10,8 @@ import morgan from 'morgan'
 
 import createApolloServer from './src/apollo'
 import db, { sequelizeConnection } from './src/db'
+
+const chalk = require('chalk')
 
 const app = express()
 const httpServer = createServer(app)

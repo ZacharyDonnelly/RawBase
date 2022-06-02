@@ -1,8 +1,8 @@
 import { join } from 'path'
 
-import * as pkgUp from 'pkg-up'
+import pkgUp from 'pkg-up'
 
-export const SERVER_WORKSPACE_PKG_JSON_PATH = pkgUp.sync()
+export const SERVER_WORKSPACE_PKG_JSON_PATH = pkgUp.pkgUpSync()
 
 if (!SERVER_WORKSPACE_PKG_JSON_PATH)
   throw new Error('package.json path could not be found')

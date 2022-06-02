@@ -14,5 +14,15 @@
         "corejs": "3"
       }
     ]
+  ],
+  "overrides": [
+    {
+      "test": "*/*.tsx?$/",
+      "presets": ["@babel/preset-typescript"]
+    },
+    {
+      "test": "**/*.d.ts",
+      "presets": [["@babel/preset-env", { "targets": { "esmodules": true } }]]
+    }
   ]
 }

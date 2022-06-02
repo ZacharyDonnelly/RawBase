@@ -2,10 +2,6 @@
 
 # dependencies
 /node_modules
-.pnp.loader.mjs
-.pnp
-*.pnp.cjs
-*.pnp
 **/cache
 # testing
 /coverage
