@@ -1657,7 +1657,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-typescript@npm:7.18.1, @babel/plugin-transform-typescript@npm:^7.17.12":
+"@babel/plugin-transform-typescript@npm:7.18.4":
+  version: 7.18.4
+  resolution: "@babel/plugin-transform-typescript@npm:7.18.4"
+  dependencies:
+    "@babel/helper-create-class-features-plugin": ^7.18.0
+    "@babel/helper-plugin-utils": ^7.17.12
+    "@babel/plugin-syntax-typescript": ^7.17.12
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+  checksum: d4575d473af634f77070f847478dfd8de7662f9a531dbaedf1f99c49b6e9b7c76d7f562a9595a82a02867a55e1f3f0a4f48c6f8756712414065a232ed856b7ae
+  languageName: node
+  linkType: hard
+
+"@babel/plugin-transform-typescript@npm:^7.17.12":
   version: 7.18.1
   resolution: "@babel/plugin-transform-typescript@npm:7.18.1"
   dependencies:
@@ -4040,7 +4053,7 @@ __metadata:
   resolution: "@rawbase/common@workspace:packages/common"
   dependencies:
     "@babel/plugin-proposal-class-properties": 7.17.12
-    "@babel/plugin-transform-typescript": 7.18.1
+    "@babel/plugin-transform-typescript": 7.18.4
     "@babel/polyfill": 7.12.1
     "@babel/preset-typescript": 7.17.12
     "@hot-loader/react-dom": 17.0.2
