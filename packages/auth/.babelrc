@@ -4,10 +4,20 @@
       "@babel/preset-env",
       {
         "targets": {
-          "node": "current"
+          "node": "16",
+          "esmodules": false
         }
       }
     ]
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties"]
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread"
+  ],
+  "overrides": [
+    {
+      "test": "**/*.d.ts",
+      "presets": [["@babel/preset-env", { "targets": { "esmodules": true } }]]
+    }
+  ]
 }

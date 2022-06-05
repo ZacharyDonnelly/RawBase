@@ -4,8 +4,6 @@
   "private": true,
   "description": "Auth microservice client for RawBase",
   "license": "MIT",
-  "main": "./server.ts",
-  "types": "./src/types/*.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -19,6 +17,7 @@
     "start": "nodemon -e ts,js,graphql -x node ts-node server.ts"
   },
   "dependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
     "@graphql-tools/graphql-file-loader": "^7.3.14",
     "@graphql-tools/load": "^7.5.13",
     "@graphql-tools/schema": "^8.3.13",
