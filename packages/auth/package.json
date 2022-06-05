@@ -55,7 +55,7 @@
     "nodemon": "2.0.16",
     "pkg-up": "4.0.0",
     "reflect-metadata": "0.1.13",
-    "ts-node": "10.8.0"
+    "ts-node": "10.8.1"
   },
   "peerDepenedencies": {
     "graphql": "^15.3.0"
