@@ -61,15 +61,15 @@
   },
   "devDependencies": {
     "@hot-loader/react-dom": "17.0.2",
-    "@storybook/addon-a11y": "6.5.6",
-    "@storybook/addon-actions": "6.5.6",
+    "@storybook/addon-a11y": "6.5.7",
+    "@storybook/addon-actions": "6.5.7",
     "@storybook/addon-console": "1.2.3",
     "@storybook/addon-info": "5.3.21",
     "@storybook/addon-knobs": "6.4.0",
     "@storybook/addon-notes": "5.3.21",
-    "@storybook/addon-storysource": "6.5.6",
-    "@storybook/addon-viewport": "6.5.6",
-    "@storybook/react": "6.5.6"
+    "@storybook/addon-storysource": "6.5.7",
+    "@storybook/addon-viewport": "6.5.7",
+    "@storybook/react": "6.5.7"
   },
   "installConfig": {
     "pnp": true
