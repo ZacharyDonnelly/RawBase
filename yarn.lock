@@ -4095,7 +4095,7 @@ __metadata:
     rollup-plugin-typescript2: 0.31.2
     sass-loader: 13.0.0
     style-loader: 3.3.1
-    terser-webpack-plugin: 5.3.1
+    terser-webpack-plugin: 5.3.3
     ts-loader: 9.3.0
     uglifyjs-webpack-plugin: 2.2.0
     url-loader: 4.1.1
@@ -26149,15 +26149,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:5.3.1, terser-webpack-plugin@npm:^5.1.3":
-  version: 5.3.1
-  resolution: "terser-webpack-plugin@npm:5.3.1"
+"terser-webpack-plugin@npm:5.3.3":
+  version: 5.3.3
+  resolution: "terser-webpack-plugin@npm:5.3.3"
   dependencies:
-    jest-worker: "npm:^27.4.5"
-    schema-utils: "npm:^3.1.1"
-    serialize-javascript: "npm:^6.0.0"
-    source-map: "npm:^0.6.1"
-    terser: "npm:^5.7.2"
+    "@jridgewell/trace-mapping": ^0.3.7
+    jest-worker: ^27.4.5
+    schema-utils: ^3.1.1
+    serialize-javascript: ^6.0.0
+    terser: ^5.7.2
   peerDependencies:
     webpack: ^5.1.0
   peerDependenciesMeta:
@@ -26167,7 +26167,7 @@ __metadata:
       optional: true
     uglify-js:
       optional: true
-  checksum: 1b808fd4f58ce0b532baacc50b9a850fc69ce0077a0e9e5076d4156c52fab3d40b02d5d9148a3eba64630cf7f40057de54f6a5a87fac1849b1f11d6bfdb42072
+  checksum: 4b8d508d8a0f6e604addb286975f1fa670f8c3964a67abc03a7cfcfd4cdeca4b07dda6655e1c4425427fb62e4d2b0ca59d84f1b2cd83262ff73616d5d3ccdeb5
   languageName: node
   linkType: hard
 
@@ -26206,6 +26206,28 @@ __metadata:
   peerDependencies:
     webpack: ^4.0.0 || ^5.0.0
   checksum: ec1b3a85e2645c57e359d5e4831f3e1d78eca2a0c94b156db70eb846ae35b5e6e98ad8784b12e153fc273e57445ce69d017075bbe9fc42868a258ef121f11537
+  languageName: node
+  linkType: hard
+
+"terser-webpack-plugin@npm:^5.1.3":
+  version: 5.3.1
+  resolution: "terser-webpack-plugin@npm:5.3.1"
+  dependencies:
+    jest-worker: "npm:^27.4.5"
+    schema-utils: "npm:^3.1.1"
+    serialize-javascript: "npm:^6.0.0"
+    source-map: "npm:^0.6.1"
+    terser: "npm:^5.7.2"
+  peerDependencies:
+    webpack: ^5.1.0
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+    esbuild:
+      optional: true
+    uglify-js:
+      optional: true
+  checksum: 1b808fd4f58ce0b532baacc50b9a850fc69ce0077a0e9e5076d4156c52fab3d40b02d5d9148a3eba64630cf7f40057de54f6a5a87fac1849b1f11d6bfdb42072
   languageName: node
   linkType: hard
 
