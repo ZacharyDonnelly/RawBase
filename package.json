@@ -48,7 +48,7 @@
     "@types/webpack-env": "1.17.0",
     "@typescript-eslint/eslint-plugin": "5.26.0",
     "@typescript-eslint/parser": "5.26.0",
-    "@yarnpkg/cli": "4.0.0-rc.6",
+    "@yarnpkg/cli": "4.0.0-rc.7",
     "@yarnpkg/core": "4.0.0-rc.6",
     "@yarnpkg/plugin-dlx": "4.0.0-rc.6",
     "@yarnpkg/sdks": "3.0.0-rc.6",
