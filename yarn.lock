@@ -7339,40 +7339,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/core@npm:4.0.0-rc.7, @yarnpkg/core@npm:^4.0.0-rc.7":
-  version: 4.0.0-rc.7
-  resolution: "@yarnpkg/core@npm:4.0.0-rc.7"
-  dependencies:
-    "@arcanis/slice-ansi": ^1.1.1
-    "@types/semver": ^7.1.0
-    "@types/treeify": ^1.0.0
-    "@yarnpkg/fslib": ^3.0.0-rc.7
-    "@yarnpkg/libzip": ^3.0.0-rc.7
-    "@yarnpkg/parsers": ^3.0.0-rc.7
-    "@yarnpkg/shell": ^4.0.0-rc.7
-    camelcase: ^5.3.1
-    chalk: ^3.0.0
-    ci-info: ^3.2.0
-    clipanion: ^3.2.0-rc.10
-    cross-spawn: 7.0.3
-    diff: ^5.1.0
-    globby: ^11.0.1
-    got: ^11.7.0
-    lodash: ^4.17.15
-    micromatch: ^4.0.2
-    p-limit: ^2.2.0
-    semver: ^7.1.2
-    strip-ansi: ^6.0.0
-    tar: ^6.0.5
-    tinylogic: ^2.0.0
-    treeify: ^1.1.0
-    tslib: ^1.13.0
-    tunnel: ^0.0.6
-  checksum: 9f3fbe36743c92c3052bad38373eb1671ceafc810b1f2e5adf35629d16cb5766150b730d2c0e01535c837a0ad84667009f3a3da634143c4de0b4bbc49de70884
-  languageName: node
-  linkType: hard
-
-"@yarnpkg/core@npm:^4.0.0-rc.8":
+"@yarnpkg/core@npm:4.0.0-rc.8, @yarnpkg/core@npm:^4.0.0-rc.8":
   version: 4.0.0-rc.8
   resolution: "@yarnpkg/core@npm:4.0.0-rc.8"
   dependencies:
@@ -7402,6 +7369,39 @@ __metadata:
     tslib: ^1.13.0
     tunnel: ^0.0.6
   checksum: 53d123fe7b43263645838cea21398f20b4718c8aeea391cc054fac48a87ad87feaf6b92051c56a913a9a9e8fee614cab0ca61bdc87043158e53fe69ca01face8
+  languageName: node
+  linkType: hard
+
+"@yarnpkg/core@npm:^4.0.0-rc.7":
+  version: 4.0.0-rc.7
+  resolution: "@yarnpkg/core@npm:4.0.0-rc.7"
+  dependencies:
+    "@arcanis/slice-ansi": ^1.1.1
+    "@types/semver": ^7.1.0
+    "@types/treeify": ^1.0.0
+    "@yarnpkg/fslib": ^3.0.0-rc.7
+    "@yarnpkg/libzip": ^3.0.0-rc.7
+    "@yarnpkg/parsers": ^3.0.0-rc.7
+    "@yarnpkg/shell": ^4.0.0-rc.7
+    camelcase: ^5.3.1
+    chalk: ^3.0.0
+    ci-info: ^3.2.0
+    clipanion: ^3.2.0-rc.10
+    cross-spawn: 7.0.3
+    diff: ^5.1.0
+    globby: ^11.0.1
+    got: ^11.7.0
+    lodash: ^4.17.15
+    micromatch: ^4.0.2
+    p-limit: ^2.2.0
+    semver: ^7.1.2
+    strip-ansi: ^6.0.0
+    tar: ^6.0.5
+    tinylogic: ^2.0.0
+    treeify: ^1.1.0
+    tslib: ^1.13.0
+    tunnel: ^0.0.6
+  checksum: 9f3fbe36743c92c3052bad38373eb1671ceafc810b1f2e5adf35629d16cb5766150b730d2c0e01535c837a0ad84667009f3a3da634143c4de0b4bbc49de70884
   languageName: node
   linkType: hard
 
@@ -22846,7 +22846,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.26.0
     "@typescript-eslint/parser": 5.26.0
     "@yarnpkg/cli": 4.0.0-rc.8
-    "@yarnpkg/core": 4.0.0-rc.7
+    "@yarnpkg/core": 4.0.0-rc.8
     "@yarnpkg/plugin-dlx": 4.0.0-rc.7
     "@yarnpkg/sdks": 3.0.0-rc.7
     classnames: 2.3.1
