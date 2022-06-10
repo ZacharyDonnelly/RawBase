@@ -7524,21 +7524,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/plugin-dlx@npm:4.0.0-rc.8":
-  version: 4.0.0-rc.8
-  resolution: "@yarnpkg/plugin-dlx@npm:4.0.0-rc.8"
-  dependencies:
-    "@yarnpkg/fslib": "npm:^3.0.0-rc.8"
-    clipanion: "npm:^3.2.0-rc.10"
-    tslib: "npm:^1.13.0"
-  peerDependencies:
-    "@yarnpkg/cli": ^4.0.0-rc.8
-    "@yarnpkg/core": ^4.0.0-rc.8
-  checksum: 0a457ab436205717a8deff045238496fcb861978074e5d04d269fddb3621c1c3e729aa959dc910d578f798986cd2808403f20b17c2a3be14b22d2586c4e49c07
-  languageName: node
-  linkType: hard
-
-"@yarnpkg/plugin-dlx@npm:^4.0.0-rc.9":
+"@yarnpkg/plugin-dlx@npm:4.0.0-rc.9, @yarnpkg/plugin-dlx@npm:^4.0.0-rc.9":
   version: 4.0.0-rc.9
   resolution: "@yarnpkg/plugin-dlx@npm:4.0.0-rc.9"
   dependencies:
@@ -22847,7 +22833,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:5.26.0"
     "@yarnpkg/cli": "npm:4.0.0-rc.9"
     "@yarnpkg/core": "npm:4.0.0-rc.9"
-    "@yarnpkg/plugin-dlx": "npm:4.0.0-rc.8"
+    "@yarnpkg/plugin-dlx": "npm:4.0.0-rc.9"
     "@yarnpkg/sdks": "npm:3.0.0-rc.8"
     classnames: "npm:2.3.1"
     concurrently: "npm:7.2.1"
