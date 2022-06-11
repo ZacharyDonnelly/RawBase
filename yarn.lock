@@ -4218,7 +4218,7 @@ __metadata:
     "@rollup/plugin-eslint": "npm:8.0.2"
     "@rollup/plugin-image": "npm:2.1.1"
     "@rollup/plugin-node-resolve": "npm:13.3.0"
-    "@rollup/plugin-typescript": "npm:8.3.2"
+    "@rollup/plugin-typescript": "npm:8.3.3"
     "@rollup/plugin-url": "npm:7.0.0"
     "@storybook/addon-a11y": "npm:6.5.8"
     "@storybook/addon-actions": "npm:6.5.8"
@@ -4405,9 +4405,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-typescript@npm:8.3.2":
-  version: 8.3.2
-  resolution: "@rollup/plugin-typescript@npm:8.3.2"
+"@rollup/plugin-typescript@npm:8.3.3":
+  version: 8.3.3
+  resolution: "@rollup/plugin-typescript@npm:8.3.3"
   dependencies:
     "@rollup/pluginutils": "npm:^3.1.0"
     resolve: "npm:^1.17.0"
@@ -4415,7 +4415,10 @@ __metadata:
     rollup: ^2.14.0
     tslib: "*"
     typescript: ">=3.7.0"
-  checksum: bdbf3c11d26b04244228cbe2bd48dbac66044c16df4ee3658276480b1e050c33f9bc72ef7b6e05a88c4a48db3d5359ab6a3acf7ff288482af29863478d014881
+  peerDependenciesMeta:
+    tslib:
+      optional: true
+  checksum: 9/4d4110426eba18685de19f1321fb95f3445ce31ecf445852c92dc87e9c12753535c606249b738fb9dd2209f845b0ba80450193e85289cbf3a915596baca7fa74
   languageName: node
   linkType: hard
 
