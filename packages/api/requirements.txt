@@ -1,5 +1,5 @@
 alembic==1.7.7
-astroid==2.11.5
+astroid==2.11.6
 blinker==1.4
 certifi==2022.5.18.1
 click==8.1.3
