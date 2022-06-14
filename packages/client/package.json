@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "3.6.7",
+    "@apollo/client": "3.6.8",
     "@rawbase/auth-server": "^1.2.1",
     "@rawbase/common": "^1.0.0",
     "@reduxjs/toolkit": "1.8.2",
