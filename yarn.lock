@@ -4173,7 +4173,7 @@ __metadata:
     apollo-server-express: "npm:3.8.2"
     bcrypt: "npm:5.0.1"
     chalk: "npm:5.0.1"
-    concurrently: "npm:7.2.1"
+    concurrently: "npm:7.2.2"
     cookie-parser: "npm:1.4.6"
     cors: "npm:2.8.5"
     dotenv: "npm:16.0.1"
@@ -11061,14 +11061,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"concurrently@npm:7.2.1":
-  version: 7.2.1
-  resolution: "concurrently@npm:7.2.1"
+"concurrently@npm:7.2.2":
+  version: 7.2.2
+  resolution: "concurrently@npm:7.2.2"
   dependencies:
     chalk: "npm:^4.1.0"
     date-fns: "npm:^2.16.1"
     lodash: "npm:^4.17.21"
-    rxjs: "npm:^6.6.3"
+    rxjs: "npm:^7.0.0"
     shell-quote: "npm:^1.7.3"
     spawn-command: "npm:^0.0.2-1"
     supports-color: "npm:^8.1.0"
@@ -11076,7 +11076,7 @@ __metadata:
     yargs: "npm:^17.3.1"
   bin:
     concurrently: dist/bin/concurrently.js
-  checksum: 384e9f48f2c53a7c46b1bb1143b9dba734953c587e0c080db0c6e71dd4a58f556d096fe4fd9d2d9c601ba7ae8e6c06d452c162bbc2b6a4b16c080c1c4b8e81b4
+  checksum: 9/9824622866e16446be16bc4e3902d02ce95c5d1290f5171c85c9f99bc23e7f3e3e24b6cd65171fc7c13eac94798d2bbaee7fb890667a4ff3c1cb65e7329bd5b0
   languageName: node
   linkType: hard
 
@@ -22866,7 +22866,7 @@ __metadata:
     "@yarnpkg/plugin-dlx": "npm:4.0.0-rc.9"
     "@yarnpkg/sdks": "npm:3.0.0-rc.9"
     classnames: "npm:2.3.1"
-    concurrently: "npm:7.2.1"
+    concurrently: "npm:7.2.2"
     conventional-changelog-cli: "npm:2.2.2"
     eslint: "npm:8.16.0"
     eslint-config-prettier: "npm:8.5.0"
@@ -24359,7 +24359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^6.3.3, rxjs@npm:^6.6.3":
+"rxjs@npm:^6.3.3":
   version: 6.6.7
   resolution: "rxjs@npm:6.6.7"
   dependencies:
@@ -24368,7 +24368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:^7.5.5":
+"rxjs@npm:^7.0.0, rxjs@npm:^7.5.5":
   version: 7.5.5
   resolution: "rxjs@npm:7.5.5"
   dependencies:
