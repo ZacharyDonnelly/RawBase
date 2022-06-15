@@ -56,7 +56,7 @@
     "graphql": "16.5.0",
     "graphql-tag": "2.12.6",
     "html-webpack-plugin": "5.5.0",
-    "mini-css-extract-plugin": "2.6.0",
+    "mini-css-extract-plugin": "2.6.1",
     "normalize.css": "8.0.1",
     "optimize-css-assets-webpack-plugin": "6.0.1",
     "postcss-loader": "7.0.0",
