@@ -4209,7 +4209,7 @@ __metadata:
     "@stylelint/prettier-config": "npm:2.0.0"
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.2.0"
-    "@testing-library/user-event": "npm:14.2.0"
+    "@testing-library/user-event": "npm:14.2.1"
     "@typescript-eslint/eslint-plugin": "npm:5.26.0"
     "@typescript-eslint/parser": "npm:5.26.0"
     awesome-typescript-loader: "npm:5.2.1"
@@ -5929,12 +5929,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:14.2.0":
-  version: 14.2.0
-  resolution: "@testing-library/user-event@npm:14.2.0"
+"@testing-library/user-event@npm:14.2.1":
+  version: 14.2.1
+  resolution: "@testing-library/user-event@npm:14.2.1"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: b34f19bbfe938d03778831b9c083d451c53f983f6f6c0db05a572b71ba5323c4125097bb4b8c97595bc9b946610d2c2f65cf1e113f047eed7a3078f28a1027e2
+  checksum: 9/e1e450670867c2f4812bc0d4c6fe71e501ca00469dcf59dea5f337b97cb1870ee528ed86d26446574f8a41cfeb9cd30e892bdebc778d00146506504ce8b19ea6
   languageName: node
   linkType: hard
 
