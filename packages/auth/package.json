@@ -4,7 +4,7 @@
   "private": true,
   "description": "Auth microservice client for RawBase",
   "license": "MIT",
-  "type": "module",
+  "type": "CommonJS",
   "scripts": {
     "build": "tsc",
     "clean": "yarn rimraf dist",
@@ -38,6 +38,7 @@
     "tslib": "^2.4.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.17.12",
     "@graphql-codegen/cli": "^2.6.2",
     "@graphql-codegen/typescript": "^2.5.1",
     "@graphql-codegen/typescript-resolvers": "^2.6.6",

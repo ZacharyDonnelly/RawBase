@@ -14,10 +14,11 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "useUnknownInCatchVariables": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": false,
+    "target": "ES2022",
     "module": "ESNext",
     "skipLibCheck": true
   },

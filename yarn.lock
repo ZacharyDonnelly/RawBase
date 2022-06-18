@@ -3834,6 +3834,7 @@ __metadata:
   resolution: "@rawbase/auth-server@workspace:packages/auth"
   dependencies:
     "@babel/plugin-proposal-object-rest-spread": ^7.18.0
+    "@babel/preset-typescript": ^7.17.12
     "@graphql-codegen/cli": ^2.6.2
     "@graphql-codegen/typescript": ^2.5.1
     "@graphql-codegen/typescript-resolvers": ^2.6.6
