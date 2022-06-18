@@ -87,5 +87,5 @@
       "uses-allowed-namespace": false
     }
   },
-  "packageManager": "yarn@2.4.3"
+  "packageManager": "yarn@3.2.1"
 }
