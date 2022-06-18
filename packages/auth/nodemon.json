@@ -3,12 +3,12 @@
   "ignore": [".git", "coverage/"],
   "verbose": true,
   "execMap": {
-    "ts": "node --experimental-loader ts-node"
+    "ts": "node -r ts-node/register"
   },
   "runOnChangeOnly": false,
   "watch": ["src/**/*", "./server.ts"],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": ".js,.json,.ts"
+  "ext": "js,json,ts"
 }

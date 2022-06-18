@@ -4,13 +4,12 @@
   "private": true,
   "description": "Auth microservice client for RawBase",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "build": "tsc",
     "clean": "yarn rimraf dist",
     "codegen": "yarn graphql-codegen",
     "debug": "yarn nodemon -e ts,js,graphql -x node --inspect -r dotenv/config src/index.js",
-    "dev": "yarn concurrently 'yarn nodemon' 'tsc --watch --preserveWatchOutput' nodemon --config .nodemon.json",
+    "dev": "yarn concurrently 'yarn nodemon' 'tsc --watch --preserveWatchOutput' -n node,ts -c green.bgBlack,white.bgBlue",
     "lint:eslint": "eslint --fix --ignore-path .gitignore --ext .ts",
     "lint:prettier": "prettier --write --loglevel warn \"**/*.{js,ts,json}\"",
     "start": "nodemon --config nodemon.json server.ts"

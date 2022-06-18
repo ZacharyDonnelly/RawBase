@@ -3,5 +3,5 @@
   "compilerOptions": {
     "importHelpers": true
   },
-  "include": ["**/*.ts", "*.ts", "**/*.js", "*.js"]
+  "include": ["src/**/*.ts", "*.ts"]
 }

@@ -13,7 +13,6 @@
     "moduleResolution": "node",
     "noUnusedLocals": false,
     "target": "ES2020",
-    "baseUrl": "./",
     "skipLibCheck": true,
   },
   "exclude": ["**/commitlint.*", "**/dist/**/*"]

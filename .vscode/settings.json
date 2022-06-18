@@ -30,7 +30,7 @@
     "scss": "css"
   },
   "emmet.syntaxProfiles": {
-    "jsx-html": "html",
+    "jsx-html": "jsx-html",
     "html": "html"
   },
   "emmet.preferences": {
@@ -57,13 +57,8 @@
   // ESLINT
   // ----------------------------------------
   // Linting:,
-  "eslint.validate": ["typescript", "typescriptreact", "javascript"],
-  "eslint.enable": true,
+  // "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
-  "eslint.packageManager": "yarn",
-  "eslint.options": {
-    "extensions": [".html", ".js", ".ts", ".tsx"]
-  },
   "json.format.enable": true,
   "javascript.validate.enable": true,
   "[jsonc]": {
@@ -74,7 +69,5 @@
   "search.exclude": {
     "**/coverage": true,
     "**/dist": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib/typescript.js",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  }
 }
