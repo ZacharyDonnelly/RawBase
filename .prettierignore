@@ -5,3 +5,28 @@ node_modules
 nginx/*
 .gitignore
 *.eslintcache
+
+# misc
+/coverage/
+!.*
+.eslintcache
+.lint-todo/
+
+# dependencies
+/bower_components/
+/node_modules/
+
+# Yarn
+.yarn/cache
+.yarn/plugins/*/**
+.yarn/releases
+.yarn/sdks
+.yarn/unplugged
+.yarn/*.*
+.pnp.*
+
+# Misc
+.husky
+.cache
+*.hbs
+/tsconfig.json

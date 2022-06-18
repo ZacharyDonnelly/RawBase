@@ -1,14 +1,14 @@
 {
   "restartable": "rs",
-  "ignore": [".git", "node_modules/", "dist/", "coverage/"],
+  "ignore": [".git", "coverage/"],
   "verbose": true,
   "execMap": {
-    "ts": "node -r ts-node/register"
+    "ts": "node --experimental-loader ts-node"
   },
   "runOnChangeOnly": false,
   "watch": ["src/**/*", "./server.ts"],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "js,json,ts"
+  "ext": ".js,.json,.ts"
 }

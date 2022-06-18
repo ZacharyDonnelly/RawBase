@@ -5,8 +5,18 @@
   "repository": "https://github.com/ZacharyDonnelly/RawBase.git",
   "license": "MIT",
   "author": "Zachary Donnelly",
+  "directories": {
+    "circleci": "circleci",
+    "config": "config",
+    "docs": "docs",
+    "packages": "packages"
+  },
   "workspaces": [
-    "packages/*"
+    "packages/api",
+    "packages/auth",
+    "packages/client",
+    "packages/common",
+    "packages/plugins"
   ],
   "scripts": {
     "api": "cd ./packages/api && flask run",
@@ -76,9 +86,8 @@
     "postcss-scss": "^4.0.4",
     "webpack": "^5.72.1"
   },
-  "packageManager": "yarn@3.2.1",
   "engines": {
-    "node": "^14.13.1 || >=16.0.0"
+    "node": "12.* || 14.* || >= 16"
   },
   "hooks": {
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",

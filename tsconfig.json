@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "lib": ["ES2020", "DOM", "ESNext", "ES2021"],
     "experimentalDecorators": true,
     "inlineSourceMap": true,
     "inlineSources": true,
@@ -14,9 +13,8 @@
     "moduleResolution": "node",
     "noUnusedLocals": false,
     "target": "ES2020",
-    "module": "ESNext",
-    "baseUrl": ".",
-    "skipLibCheck": true
+    "baseUrl": "./",
+    "skipLibCheck": true,
   },
-  "exclude": [".yarn/**", "**/commitlint.*", "**/dist/**/*"]
+  "exclude": ["**/commitlint.*", "**/dist/**/*"]
 }
