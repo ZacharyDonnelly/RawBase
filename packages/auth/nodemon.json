@@ -1,21 +1,14 @@
 {
   "restartable": "rs",
-  "ignore": [".git", "dist"],
+  "ignore": [".git", "node_modules/", "dist/", "coverage/"],
   "verbose": true,
   "execMap": {
-    "js": "node"
+    "ts": "node -r ts-node/register"
   },
   "runOnChangeOnly": false,
-  "watch": ["**/*.js", "**/*.graphql", "**/*.gql", "**/*.ts", "*.ts"],
+  "watch": ["src/**/*", "./server.ts"],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": {
-    ".graphql": "graphql",
-    ".gql": "graphql",
-    ".ts": "ts",
-    ".js": "js",
-    ".json": "json"
-  },
-  "exec": "ts-node ./server.ts babel --extensions '.ts'"
+  "ext": "js,json,ts"
 }

@@ -68,6 +68,7 @@
     "sass": "^1.52.3",
     "scriptlint": "^2.2.0",
     "semantic-release": "^19.0.3",
+    "ts-node": "^10.8.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
@@ -75,6 +76,7 @@
     "postcss-scss": "^4.0.4",
     "webpack": "^5.72.1"
   },
+  "packageManager": "yarn@3.2.1",
   "engines": {
     "node": "^14.13.1 || >=16.0.0"
   },
@@ -86,6 +88,5 @@
     "rules": {
       "uses-allowed-namespace": false
     }
-  },
-  "packageManager": "yarn@2.4.3"
+  }
 }

@@ -8,19 +8,15 @@
     "noFallthroughCasesInSwitch": true,
     "noEmit": true,
     "allowJs": true,
-    "checkJs": true,
-    "importHelpers": true, // Use tslib instead of adding helpers to every emitted js file
-    "removeComments": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node",
-    "useUnknownInCatchVariables": true,
-    "noUncheckedIndexedAccess": true,
+    "moduleResolution": "node",
     "noUnusedLocals": false,
-    "target": "ES2022",
+    "target": "ES2020",
     "module": "ESNext",
+    "baseUrl": ".",
     "skipLibCheck": true
   },
-  "exclude": ["**/node_modules", "**/commitlint.*", "**/dist/**/*", "**/*.js"]
+  "exclude": [".yarn/**", "**/commitlint.*", "**/dist/**/*"]
 }
