@@ -27,11 +27,11 @@
   "emmet.includeLanguages": {
     "jsx-html": "html",
     "html": "html",
-    "scss": "css",
+    "scss": "css"
   },
   "emmet.syntaxProfiles": {
     "jsx-html": "html",
-    "html": "html",
+    "html": "html"
   },
   "emmet.preferences": {
     "jsx-html": {
@@ -41,7 +41,7 @@
       "semicolons": false,
       "jsxSemicolons": false,
       "endOfLine": "lf",
-      "jsxEndOfLine": "lf",
+      "jsxEndOfLine": "lf"
     }
   },
   "emmet.showAbbreviationSuggestions": true,
@@ -76,7 +76,5 @@
     "**/dist": true
   },
   "typescript.tsdk": "node_modules/typescript/lib/typescript.js",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "eslint.nodePath": "node_modules/.bin/eslint",
-  "prettier.prettierPath": "node_modules/.bin/prettier"
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

@@ -1,17 +1,17 @@
 /* eslint-disable no-console */
 import { createServer } from 'http'
 
+import chalk from 'chalk'
+
 // ts-ignore
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
 import dotenv from 'dotenv'
 import express, { urlencoded } from 'express'
-import cors from 'cors'
-import cookieParser from 'cookie-parser'
 import morgan from 'morgan'
 
 import createApolloServer from './src/apollo'
 import db, { sequelizeConnection } from './src/db'
-
-const chalk = require('chalk')
 
 const app = express()
 const httpServer = createServer(app)
@@ -45,15 +45,15 @@ const main = async () => {
         console.log(
           [
             `\n`,
-            chalk.bgBlueBright.white.bold(
+            chalk?.bgBlueBright.white.bold(
               `GraphQL server ${''} ready at\thttp://localhost:${
                 process.env.PORT
               }/graphql\n`
             ),
-            chalk.bgWhite.black(
+            chalk?.bgWhite.black(
               `Rest API server ready at\thttp://localhost:${process.env.PORT}\n`
             ),
-            chalk.bgMagentaBright.black(
+            chalk?.bgMagentaBright.black(
               `Database server ready at\tsqlite://127.0.0.1:${process.env.DB_PORT}\n`
             )
           ].join('')

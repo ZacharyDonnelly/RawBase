@@ -14,6 +14,10 @@
     // Lint markdown in README files
     // https://github.com/DavidAnson/vscode-markdownlint
     "DavidAnson.vscode-markdownlint",
-    "arcanis.vscode-zipfs"
+    "arcanis.vscode-zipfs",
+    "graphql.vscode-graphql",
+    "firsttris.vscode-jest-runner",
+    "mikestead.dotenv",
+    "orta.vscode-jest"
   ]
 }

@@ -18,7 +18,7 @@
     "useUnknownInCatchVariables": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": false,
-    "module": "umd",
+    "module": "ESNext",
     "skipLibCheck": true
   },
   "exclude": ["**/node_modules", "**/commitlint.*", "**/dist/**/*", "**/*.js"]

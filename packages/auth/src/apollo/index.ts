@@ -1,18 +1,21 @@
 import { Server } from 'http'
 
-import * as express from 'express'
+import path from 'path'
+
 import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader'
 import { loadSchemaSync } from '@graphql-tools/load'
 import { addResolversToSchema } from '@graphql-tools/schema'
-import { ApolloServer, ExpressContext } from 'apollo-server-express'
 import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core'
+import { ApolloServer, ExpressContext } from 'apollo-server-express'
+import * as express from 'express'
 
-import { GRAPHQL_SCHEMA_PATH } from '../constants'
 import resolvers from '../graphql/resolvers'
 
 import { ResolverContext } from './../graphql/resolvers/index'
 
-const SCHEMA = loadSchemaSync(GRAPHQL_SCHEMA_PATH, {
+const current = path.dirname('schema.graphql')
+
+const SCHEMA = loadSchemaSync(current, {
   loaders: [new GraphQLFileLoader()]
 })
 
