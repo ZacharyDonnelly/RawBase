@@ -1,31 +1,31 @@
 {
-  "./packages/client/src/**/*.tsx": [
+  "**/client/**/*.tsx": [
     "yarn lint:eslint:client",
     "yarn lint:prettier:client"
   ],
-  "./packages/auth/src/**/*.tsx": [
-    "yarn lint:eslint:auth",
-    "yarn lint:prettier:auth"
-  ],
-  "./packages/common/src/**/*.tsx": [
-    "yarn lint:eslint:auth",
-    "yarn lint:prettier:auth"
-  ],
-  "./packages/client/src/**/*.module.scss": ["yarn lint:prettier:client"],
-  "./packages/common/src/**/*.module.scss": ["yarn lint:prettier:client"],
-  "./packages/client/src/**/*.scss": ["yarn lint:prettier:client"],
-  "./packages/common/src/**/*.scss": ["yarn lint:prettier:client"],
-  "./packages/client/src/**/*.ts": [
+  "**/client/**/*.module.scss": ["yarn lint:prettier:client"],
+  "**/client/**/*.scss": ["yarn lint:prettier:client"],
+  "**/client/**/*.ts": [
     "yarn lint:eslint:client",
     "yarn lint:prettier:client"
   ],
-  "./packages/auth/src/**/*.ts": [
+  "**/auth/**/*.tsx": [
     "yarn lint:eslint:auth",
     "yarn lint:prettier:auth"
   ],
-  "./packages/common/src/**/*.ts": [
+  "**/auth/**/*.ts": [
     "yarn lint:eslint:auth",
     "yarn lint:prettier:auth"
   ],
-  "./packages/auth/*.ts": ["yarn lint:eslint:auth", "yarn lint:prettier:auth"]
+  "**/auth/*.ts": ["yarn lint:eslint:auth", "yarn lint:prettier:auth"],
+  "**/common/**/*.tsx": [
+    "yarn lint:eslint:auth",
+    "yarn lint:prettier:auth"
+  ],
+  "**/common/**/*.module.scss": ["yarn lint:prettier:client"],
+  "**/common/**/*.scss": ["yarn lint:prettier:client"],
+  "**/common/**/*.ts": [
+    "yarn lint:eslint:auth",
+    "yarn lint:prettier:auth"
+  ]
 }
