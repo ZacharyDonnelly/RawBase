@@ -4,40 +4,9 @@
   "stylelint.enable": true,
   "css.validate": false,
   "scss.validate": false,
-  "stylelint.snippet": [
-    "css",
-    "less",
-    "postcss",
-    "scss"
-  ],
-  "stylelint.validate": [
-    "css",
-    "less",
-    "postcss",
-    "scss"
-  ],
-  // VETUR
-  // Disable rules if user has extension installed and enabled.
+  "stylelint.snippet": ["css", "less", "postcss", "scss"],
+  "stylelint.validate": ["css", "less", "postcss", "scss"],
   // ----------------------------------------
-  // Files
-  "files.exclude": {
-    "**/*.log": true,
-    "**/*.log*": true,
-    "**/dist": true,
-    "**/coverage": true
-  },
-  // Defaults override:
-  "vetur.validation.style": false,
-  "vetur.validation.script": true,
-  "vetur.validation.template": true,
-  "vetur.experimental.templateInterpolationService": true,
-  "vetur.grammar.customBlocks": {
-    "docs": "md",
-    "i18n": "json",
-    "router": "js"
-  },
-  // Disables default checks:
-  "less.validate": false,
   // EDITOR
   // ----------------------------------------
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -48,9 +17,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[scss]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
@@ -59,30 +25,44 @@
   "html.format.enable": false,
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-    "vue-html": "html"
+    "jsx-html": "html",
+    "html": "html",
+    "scss": "css",
   },
+  "emmet.syntaxProfiles": {
+    "jsx-html": "html",
+    "html": "html",
+  },
+  "emmet.preferences": {
+    "jsx-html": {
+      "selfClosingStyle": "html",
+      "singleQuote": true,
+      "jsxSingleQuote": true,
+      "semicolons": false,
+      "jsxSemicolons": false,
+      "endOfLine": "lf",
+      "jsxEndOfLine": "lf",
+    }
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
   // FILES
   // ----------------------------------------
   "files.associations": {
-    "*.config.js": "javascript",
-    "*.vue": "vue"
+    "*.config.js": "javascript"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
   },
   // ESLINT
   // ----------------------------------------
   // Linting:,
-  "eslint.validate": [
-    "typescript",
-    "typescriptreact",
-    "javascript"
-  ],
+  "eslint.validate": ["typescript", "typescriptreact", "javascript"],
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
   "eslint.options": {
-    "extensions": [
-      ".html",
-      ".js",
-      ".ts"
-    ]
+    "extensions": [".html", ".js", ".ts", ".tsx"]
   },
   "json.format.enable": true,
   "javascript.validate.enable": true,
@@ -92,14 +72,11 @@
   // YARN
   // ----------------------------------------
   "search.exclude": {
-    "**/node_modules": true,
     "**/coverage": true,
-    "**/dist": true,
-    "**/.yarn": true,
-    "**/.pnp.*": true
+    "**/dist": true
   },
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.tsdk": "node_modules/typescript/lib/typescript.js",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+  "eslint.nodePath": "node_modules/.bin/eslint",
+  "prettier.prettierPath": "node_modules/.bin/prettier"
 }
