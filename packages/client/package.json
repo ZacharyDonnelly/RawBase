@@ -54,7 +54,7 @@
     "cssnano": "^5.1.11",
     "file-loader": "^6.2.0",
     "graphql": "^16.5.0",
-    "graphql-tag": "^2.12.6",
+    "graphql-tag": "2.12.6",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
     "normalize.css": "^8.0.1",
