@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.18.0",
-    "@graphql-tools/graphql-file-loader": "^7.3.15",
+    "@graphql-tools/graphql-file-loader": "7.3.16",
     "@graphql-tools/load": "^7.5.14",
     "@graphql-tools/schema": "^8.3.14",
     "apollo-server": "3.9.0",
