@@ -78,7 +78,7 @@
     "sass": "^1.52.3",
     "scriptlint": "^2.2.0",
     "semantic-release": "^19.0.3",
-    "ts-node": "^10.8.1",
+    "ts-node": "10.8.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
