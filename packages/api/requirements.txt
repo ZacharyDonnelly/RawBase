@@ -18,7 +18,7 @@ Mako==1.2.4
 MarkupSafe==2.1.1
 mccabe==0.6.1
 pipenv==2022.1.8
-platformdirs==2.5.2
+platformdirs==2.5.4
 pycodestyle==2.8.0
 pyflakes==2.4.0
 pylint==2.12.2
